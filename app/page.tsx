@@ -21,6 +21,7 @@ import {
   X,
   ChevronDown,
   ChevronUp,
+  LucideProps,
 } from "lucide-react";
 
 const FEATURES_DATA = [
@@ -105,7 +106,20 @@ export default function Home() {
   const [visibleCount, setVisibleCount] = useState(1); // Default 1 untuk mobile
 
   useEffect(() => {
-    const shuffleArray = (array) => {
+    const shuffleArray = (
+      array: {
+        id: string;
+        title: string;
+        subtitle: string;
+        desc: string;
+        badge: string;
+        icon: React.ForwardRefExoticComponent<
+          Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
+        >;
+        colors: { bg: string; text: string };
+        isLarge: boolean;
+      }[],
+    ) => {
       const newArray = [...array];
       for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
