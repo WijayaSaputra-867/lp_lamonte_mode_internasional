@@ -61,7 +61,7 @@ export default function Home() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
               <a 
                 href="https://wa.me/6281234567890" 
-                className="flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-bold text-white transition-all hover:bg-primary-hover hover:scale-105 glow-soft group"
+                className="flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white transition-all hover:bg-primary-hover hover:scale-105 glow-soft group"
               >
                 Konsultasi Gratis <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </a>
@@ -306,9 +306,9 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="https://wa.me/6281234567890" 
-                className="flex items-center justify-center gap-3 rounded-full bg-primary px-10 py-5 text-xl font-bold text-white transition-all hover:bg-primary-hover hover:scale-105 shadow-xl shadow-amber-500/30"
+                className="flex items-center justify-center gap-3 rounded-full bg-primary px-6 py-4 sm:px-10 sm:py-5 text-base sm:text-xl font-bold text-white transition-all hover:bg-primary-hover hover:scale-105 shadow-xl shadow-amber-500/30"
               >
-                <MessageCircle size={24} /> Hubungi Admin via WhatsApp
+                <MessageCircle size={20} className="sm:w-6 sm:h-6" /> Hubungi Admin via WhatsApp
               </a>
             </div>
             <p className="mt-8 text-sm text-zinc-500 flex items-center justify-center gap-2 font-medium">
