@@ -102,7 +102,9 @@ export default function Home() {
   const [isTierTab, setIsTierTab] = useState("Populer");
 
   const [isMobile, setIsMobile] = useState(false);
-  const [shuffledFeatures, setShuffledFeatures] = useState([]);
+  const [shuffledFeatures, setShuffledFeatures] = useState<
+    typeof FEATURES_DATA
+  >([]);
   const [visibleCount, setVisibleCount] = useState(1); // Default 1 untuk mobile
 
   useEffect(() => {
@@ -717,7 +719,7 @@ export default function Home() {
                 .map((tier, i) => (
                   <div
                     key={i}
-                    className={`min-w-[85vw] md:min-w-0 shrink-0 snap-center relative group rounded-[2.5rem] p-6 md:p-8 transition-all hover:translate-y-[-8px] ${tier.recommended ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10" : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"}`}>
+                    className={`min-w-[85vw] md:min-w-0 shrink-0 snap-center relative group rounded-[2.5rem] p-6 md:p-8 transition-all hover:-translate-y-2 ${tier.recommended ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10" : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"}`}>
                     {tier.recommended && (
                       <div className='absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/30'>
                         Pilihan Terbaik
