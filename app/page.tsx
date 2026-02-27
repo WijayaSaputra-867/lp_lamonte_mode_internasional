@@ -21,7 +21,120 @@ import {
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isTierTab, setIsTierTab] = useState("Populer");
 
+  const allTiers = [
+    {
+      category: "Hemat",
+      name: "Paket Sampel Murmer",
+      price: "650.000",
+      tag: "Tes Pasar Paling Hemat",
+      desc: "25 pcs campur ukuran",
+      summary: "Untuk tes minat pasar tanpa takut stok numpuk.",
+      perks: ["Stok ringan, aman untuk mulai", "Mix model laris untuk display & foto", "Enak dijual ke tetangga/teman"],
+      recommended: false
+    },
+    {
+      category: "Hemat",
+      name: "Paket Mix Sampel Murmer",
+      price: "850.000",
+      tag: "Sample Mix Import Lokal",
+      desc: "30 pcs (mix import lokal)",
+      summary: "Lebih banyak varian untuk lihat selera pasar.",
+      perks: ["Kombinasi import & lokal pilihan", "Cocok untuk foto katalog awal", "Siap dijual online & offline"],
+      recommended: false
+    },
+    {
+      category: "Populer",
+      name: "Paket Usaha Mix Fashion",
+      price: "1.000.000",
+      tag: "Mulai Usaha Serius",
+      desc: "36 pcs (mix import lokal)",
+      summary: "Pas untuk kamu yang siap jualan rutin.",
+      perks: ["Komposisi harian & semi-event", "Bisa dijual satuan atau paket", "Enak mulai masuk marketplace"],
+      recommended: false
+    },
+    {
+      category: "Populer",
+      name: "Paket Super Trial",
+      price: "1.200.000",
+      tag: "Ngetest Market Online",
+      desc: "30 pcs",
+      summary: "Ideal untuk tes market di IG, TikTok & WA.",
+      perks: ["Isi model fotogenik untuk konten", "Support foto & caption", "Aman untuk tes harga & respon pasar"],
+      recommended: false
+    },
+    {
+      category: "Populer",
+      name: "Paket Kombinasi",
+      price: "1.650.000",
+      tag: "Paket Kombinasi Flexible",
+      desc: "45 pcs (mix import lokal)",
+      summary: "Untuk yang ingin varian ukuran & model lebih banyak.",
+      perks: ["Nyaman untuk keluarga & online", "Enak untuk paket bundling", "Stok masih ringan tapi 'jalan'"],
+      recommended: false
+    },
+    {
+      category: "Populer",
+      name: "Paket Boom Laris Jualan",
+      price: "1.800.000",
+      tag: "Best Seller Pemula Naik Level",
+      desc: "50 pcs",
+      summary: "Pas untuk yang sudah rutin dapat order.",
+      perks: ["Komposisi model paling laris", "Cocok untuk live & flash sale", "Mulai siap gandeng reseller sekitar"],
+      recommended: true
+    },
+    {
+      category: "Serius",
+      name: "New Paket Eksklusif",
+      price: "2.250.000",
+      tag: "New Paket Eksklusif",
+      desc: "65 pcs",
+      summary: "Untuk segmen bunda yang cari look premium.",
+      perks: ["Fokus model premium & rapi difoto", "Cocok main di harga menengah atas", "Bantu naikkan image 'toko serius'"],
+      recommended: false
+    },
+    {
+      category: "Serius",
+      name: "Paket Mini Murmer",
+      price: "3.550.000",
+      tag: "Siapin Stok Harian",
+      desc: "100 pcs",
+      summary: "Stok nyaman untuk sering upload & sering closing.",
+      perks: ["Cocok untuk jualan full online", "Siap untuk beberapa momen promo", "Mulai bisa gandeng reseller kecil"],
+      recommended: false
+    },
+    {
+      category: "Serius",
+      name: "Paket Hemat Buka Usaha",
+      price: "5.500.000",
+      tag: "Siap Jadi Toko Serius",
+      desc: "125 pcs",
+      summary: "Paket hemat buat mulai usaha lebih serius.",
+      perks: ["Cukup untuk etalase kecil di rumah", "Enak mulai rekrut reseller aktif", "Kombinasi harian & event"],
+      recommended: true
+    },
+    {
+      category: "Strategic",
+      name: "Paket Buka Toko",
+      price: "12.500.000",
+      tag: "Paket Buka Toko Offline",
+      desc: "300-350 pcs (free banner)",
+      summary: "Siap punya toko fisik dengan tampilan profesional.",
+      perks: ["Stok 300-350 pcs mix model", "Free banner toko siap pasang", "Cocok untuk kios kecil atau di rumah"],
+      recommended: false
+    },
+    {
+      category: "Strategic",
+      name: "Paket Ball Mega Premium",
+      price: "25.000.000",
+      tag: "Level Ball Mega Premium",
+      desc: "550 pcs",
+      summary: "Untuk yang siap kuasai area dan bangun jaringan.",
+      perks: ["Stok besar cover 1 kota/kabupaten", "Ideal bangun tim reseller", "Dibantu susun strategi distribusi"],
+      recommended: true
+    }
+  ];
   return (
     <div className="relative isolate overflow-hidden bg-background">
       {/* Navbar */}
@@ -37,6 +150,7 @@ export default function Home() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
             <a href="#features" className="hover:text-primary transition-colors">Keunggulan</a>
+            <a href="#catalog" className="hover:text-primary transition-colors">Katalog</a>
             <a href="#tiers" className="hover:text-primary transition-colors">Paket Mitra</a>
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
           </div>
@@ -68,6 +182,13 @@ export default function Home() {
               className="text-lg font-bold text-zinc-900 border-b border-zinc-50 pb-2"
             >
               Keunggulan
+            </a>
+            <a 
+              href="#catalog" 
+              onClick={() => setIsMenuOpen(false)}
+              className="text-lg font-bold text-zinc-900 border-b border-zinc-50 pb-2"
+            >
+              Katalog
             </a>
             <a 
               href="#tiers" 
@@ -110,10 +231,10 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
               <a 
-                href="https://wa.me/6281234567890" 
+                href="#catalog" 
                 className="flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white transition-all hover:bg-primary-hover hover:scale-105 glow-soft group"
               >
-                Konsultasi Gratis <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                Lihat Produk Terlaris <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </a>
               <div className="flex -space-x-3 overflow-hidden py-1">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -160,68 +281,197 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 glass-dark rounded-3xl p-8 relative overflow-hidden h-[320px] group transition-all hover:bg-white border-zinc-200">
-              <div className="relative z-10 h-full flex flex-col justify-end">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-white glow">
-                  <Zap size={24} />
-                </div>
-                <h3 className="text-2xl font-bold text-zinc-900 mb-2 outfit">Sistem Otomatis & Teruji</h3>
-                <p className="text-zinc-600 max-w-md text-base leading-relaxed">
-                  Kelola orderan, cek stok real-time, dan monitor profit harian Anda melalui dashboard mitra yang user-friendly. No ribet, no pusing!
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Modul A */}
+            <div className="glass-dark rounded-[2.5rem] p-8 transition-all hover:bg-white border-zinc-200 flex flex-col h-full bg-white/50">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+                <ShieldCheck size={28} />
               </div>
-              <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity">
-                 <div className="h-full w-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.5)_0,transparent_70%)] blur-3xl"></div>
-              </div>
-            </div>
-            
-            <div className="glass-dark rounded-3xl p-8 transition-all hover:bg-white border-zinc-200">
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-100 text-zinc-900">
-                <Heart size={24} className="text-rose-500" />
-              </div>
-              <h3 className="text-2xl font-bold text-zinc-900 mb-2 outfit">Kualitas Premium</h3>
-              <p className="text-zinc-600 text-base leading-relaxed">
-                Produk kami menggunakan bahan grade A yang aman & nyaman untuk anak-anak, membuat konsumen repeat order.
+              <h3 className="text-2xl font-bold text-zinc-900 mb-1 outfit">Branding Toko Naik Kelas</h3>
+              <p className="text-zinc-500 font-medium text-sm mb-4">Modul A: Brand Identity Kit</p>
+              <p className="text-zinc-600 text-base leading-relaxed mb-8 flex-grow">
+                Toko kecil rasa official store. Dapat desain sertifikat, ID card, banner, dan template feed seragam. Bikin calon pembeli langsung percaya.
               </p>
+              <div className="mt-auto inline-flex items-center gap-2 rounded-xl bg-blue-50 px-4 py-2 text-xs font-bold text-blue-600">
+                <CheckCircle2 size={14} />
+                <span>Toko terlihat rapi & niat</span>
+              </div>
             </div>
 
-            <div className="glass-dark rounded-3xl p-8 transition-all hover:bg-white border-zinc-200">
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-100 text-zinc-900">
-                <Users size={24} className="text-primary" />
+            {/* Modul B */}
+            <div className="glass-dark rounded-[2.5rem] p-8 transition-all hover:bg-white border-zinc-200 flex flex-col h-full bg-white/50">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 text-purple-600">
+                <TrendingUp size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-zinc-900 mb-2 outfit">Bimbingan Eksklusif</h3>
-              <p className="text-zinc-600 text-base leading-relaxed">
-                Dapatkan akses ke webinar rutin, materi jualan harian, dan support grup WhatsApp bersama para mentor.
+              <h3 className="text-2xl font-bold text-zinc-900 mb-1 outfit">Angka Jelas, Target Nyata</h3>
+              <p className="text-zinc-500 font-medium text-sm mb-4">Modul B: Kalkulator Cuan Sultan</p>
+              <p className="text-zinc-600 text-base leading-relaxed mb-8 flex-grow">
+                Masukkan modal dan target penghasilan. Sistem hitung otomatis target harian, harga ideal, dan skenario promo. Jualan pakai data, bukan feeling.
               </p>
+              <div className="mt-auto inline-flex items-center gap-2 rounded-xl bg-purple-50 px-4 py-2 text-xs font-bold text-purple-600">
+                <CheckCircle2 size={14} />
+                <span>Tau angka, berani gas</span>
+              </div>
             </div>
 
-            <div className="md:col-span-2 glass-dark rounded-3xl p-8 relative overflow-hidden transition-all hover:bg-white border-zinc-200">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
+            {/* Modul C */}
+            <div className="glass-dark rounded-[2.5rem] p-8 transition-all hover:bg-white border-zinc-200 flex flex-col h-full bg-white/50">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-50 text-pink-600">
+                <ShoppingBag size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-1 outfit">Konten Katalog Auto Cakep</h3>
+              <p className="text-zinc-500 font-medium text-sm mb-4">Modul C: Model & Content Academy</p>
+              <p className="text-zinc-600 text-base leading-relaxed mb-8 flex-grow">
+                Diajarin cara foto anak pakai HP, angle yang laku, dan filter praktis. Plus stok foto katalog profesional yang siap pakai.
+              </p>
+              <div className="mt-auto inline-flex items-center gap-2 rounded-xl bg-pink-50 px-4 py-2 text-xs font-bold text-pink-600">
+                <CheckCircle2 size={14} />
+                <span>Feed keliatan brand besar</span>
+              </div>
+            </div>
+
+            {/* Modul D */}
+            <div className="glass-dark rounded-[2.5rem] p-8 transition-all hover:bg-white border-zinc-200 flex flex-col h-full bg-white/50">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-orange-600">
+                <Package size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-1 outfit">Toko Online Siap Panen</h3>
+              <p className="text-zinc-500 font-medium text-sm mb-4">Modul D: Marketplace Playbook</p>
+              <p className="text-zinc-600 text-base leading-relaxed mb-8 flex-grow">
+                Step-by-step buka toko di marketplace. Dapat contoh judul, deskripsi, foto, dan pola diskon yang bikin produk sering muncul di pencarian.
+              </p>
+              <div className="mt-auto inline-flex items-center gap-2 rounded-xl bg-orange-50 px-4 py-2 text-xs font-bold text-orange-600">
+                <CheckCircle2 size={14} />
+                <span>Nggak bingung mulai dari mana</span>
+              </div>
+            </div>
+
+            {/* Modul E */}
+            <div className="glass-dark rounded-[2.5rem] p-8 transition-all hover:bg-white border-zinc-200 flex flex-col h-full bg-white/50">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+                <MessageCircle size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-1 outfit">CS Robot Jago Nego</h3>
+              <p className="text-zinc-500 font-medium text-sm mb-4">Modul E: WA Automation & Script Closing</p>
+              <p className="text-zinc-600 text-base leading-relaxed mb-8 flex-grow">
+                Tinggal copy-paste template chat yang sudah teruji. Dari chat nanya harga sampai minta diskon. Bisa diset otomatis, jadi tetap closing walau kamu lagi sibuk.
+              </p>
+              <div className="mt-auto inline-flex items-center gap-2 rounded-xl bg-emerald-50 px-4 py-2 text-xs font-bold text-emerald-600">
+                <CheckCircle2 size={14} />
+                <span>Chat rapi, closing naik</span>
+              </div>
+            </div>
+
+            {/* Modul F */}
+            <div className="glass-dark rounded-[2.5rem] p-8 transition-all hover:bg-white border-zinc-200 flex flex-col h-full bg-white/50">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-red-600">
+                <Zap size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-1 outfit">Konten Harian Anti Buntu</h3>
+              <p className="text-zinc-500 font-medium text-sm mb-4">Modul F: 365 Hari Kalender Konten</p>
+              <p className="text-zinc-600 text-base leading-relaxed mb-8 flex-grow">
+                Ide konten harian sudah disiapkan. Ada contoh caption, hook, dan CTA. Tinggal pilih, eksekusi, dan ulangi.
+              </p>
+              <div className="mt-auto inline-flex items-center gap-2 rounded-xl bg-red-50 px-4 py-2 text-xs font-bold text-red-600">
+                <CheckCircle2 size={14} />
+                <span>Setahun selalu ada bahan</span>
+              </div>
+            </div>
+
+            {/* Modul G - Large Feature */}
+            <div className="md:col-span-3 glass-dark rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden transition-all hover:bg-white border-zinc-200 bg-white/50">
+              <div className="flex flex-col md:flex-row gap-12 items-center">
                 <div className="flex-1">
-                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <ShieldCheck size={24} />
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-50 text-amber-600">
+                    <Users size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-zinc-900 mb-2 outfit">Marketing Kit Lengkap</h3>
-                  <p className="text-zinc-600 text-base leading-relaxed">
-                    Kami sediakan ribuan konten foto & video HD siap posting setiap hari. Tidak perlu repot sewa model atau sewa studio sendiri.
+                  <h3 className="text-3xl font-bold text-zinc-900 mb-2 outfit">Modul G: Sekolah Pebisnis Lapangan</h3>
+                  <p className="text-zinc-500 font-bold text-lg mb-6">Live Zoom & Mentoring</p>
+                  <p className="text-zinc-600 text-lg leading-relaxed mb-8 max-w-2xl">
+                    Kelas Zoom rutin: update tren jualan, studi kasus mitra, dan sesi tanya jawab. Kamu nggak cuma ikut-ikutan, tapi paham cara mainnya.
                   </p>
+                  <div className="inline-flex items-center gap-2 rounded-xl bg-amber-50 px-6 py-3 text-sm font-bold text-amber-600">
+                    <CheckCircle2 size={18} />
+                    <span>Cek Jadwal Kelas</span>
+                  </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
                     {[1,2,3,4].map(i => (
-                      <div key={i} className="aspect-square w-24 rounded-lg bg-zinc-100 overflow-hidden border border-zinc-200 grayscale hover:grayscale-0 transition-all cursor-pointer">
-                        <img src={`https://picsum.photos/200?random=${i}`} alt="product" className="object-cover w-full h-full" />
+                      <div key={i} className="aspect-square w-24 md:w-32 rounded-2xl bg-white p-2 border border-zinc-100 shadow-sm hover:shadow-md transition-all">
+                        <img src={`https://picsum.photos/200?random=${i+20}`} alt="mentoring" className="object-cover w-full h-full rounded-xl" />
                       </div>
                     ))}
                 </div>
               </div>
+              <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity bg-gradient-to-l from-amber-500 to-transparent"></div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Catalog Section */}
+      <section id="catalog" className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl md:text-5xl outfit mb-4">
+              Katalog Produk Unggulan
+            </h2>
+            <p className="text-zinc-600 max-w-2xl mx-auto text-lg">
+              Koleksi baju anak premium dengan desain trendy dan kualitas bahan terbaik. Siap untuk Anda pasarkan segera.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            {[
+              { name: "Setelan Celana Pendek Little Dino", cat: "Setelan Anak Laki-laki", price: "Best Seller" },
+              { name: "Dress Cotton Candy Premium", cat: "Dress Anak Perempuan", price: "New Arrival" },
+              { name: "T-Shirt Oversize Urban Junior", cat: "Kaos Anak Unisex", price: "Trending" },
+              { name: "Pajamas Soft Sleep Collection", cat: "Pakaian Tidur", price: "Restock" },
+              { name: "Jaket Windbreaker Explorer", cat: "Outerwear Premium", price: "Recommended" },
+              { name: "Legging Stretch Comfort Kids", cat: "Celana & Bawahan", price: "Essential" },
+              { name: "One-Set Polkadot Sweetie", cat: "Setelan Anak Perempuan", price: "Limited Editon" },
+              { name: "Hoodie Fleece Winter Warm", cat: "Outerwear Anak", price: "Hot Deal" },
+            ].map((prod, i) => (
+              <div key={i} className="group relative glass-dark rounded-3xl p-4 transition-all hover:bg-white border-zinc-100 hover:shadow-xl hover:shadow-zinc-200/50">
+                <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-zinc-100 mb-4 relative">
+                  <img 
+                    src={`https://picsum.photos/400/500?random=${i+50}`} 
+                    alt={prod.name} 
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest shadow-lg shadow-amber-500/30">
+                      {prod.price}
+                    </span>
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold text-primary uppercase tracking-widest">{prod.cat}</p>
+                  <h3 className="text-sm md:text-base font-bold text-zinc-900 truncate outfit">{prod.name}</h3>
+                  <div className="pt-3 flex items-center justify-between">
+                    <span className="text-xs font-medium text-zinc-400">Harga Khusus Mitra</span>
+                    <div className="h-8 w-8 flex items-center justify-center rounded-full bg-zinc-50 text-zinc-900 group-hover:bg-primary group-hover:text-white transition-colors">
+                      <ShoppingBag size={14} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <a 
+              href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20melihat%20katalog%20lengkap%20Mitra%20Lamonte." 
+              className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-8 py-3 text-sm font-bold text-primary transition-all hover:bg-primary hover:text-white group"
+            >
+              Lihat Katalog Lengkap via WhatsApp <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Partnership Tiers */}
-      <section id="tiers" className="py-24 bg-white">
+      <section id="tiers" className="py-24 bg-zinc-50">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl md:text-5xl outfit mb-4">
@@ -232,37 +482,73 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { name: "Dropshipper", desc: "Tanpa stok barang, modal minimal.", perks: ["Profit 10-15%", "Materi Jualan", "Dashboard Order"] },
-              { name: "Reseller", desc: "Harga lebih murah, stok barang sendiri.", perks: ["Profit 20-30%", "Materi Jualan", "Support Grup", "Bonus Penjualan"], recommended: true },
-              { name: "Agen", desc: "Suplier untuk para reseller di wilayah Anda.", perks: ["Harga Grosir Khusus", "Wilayah Eksklusif", "Marketing Kit Fisik", "Akses Mentor"] },
-              { name: "Distributor", desc: "Tingkat tertinggi dengan profit maksimal.", perks: ["Harga Tangan Pertama", "Target Wilayah Besar", "Training Eksklusif", "Profit Maksimal"] },
-            ].map((tier, i) => (
-              <div key={i} className={`relative rounded-3xl p-8 transition-all hover:translate-y-[-4px] ${tier.recommended ? 'bg-amber-50/50 border-2 border-primary shadow-xl shadow-amber-200/20' : 'bg-white border border-zinc-200 shadow-sm hover:shadow-md'}`}>
-                {tier.recommended && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/30">
-                    Paling Populer
-                  </div>
-                )}
-                <h3 className="text-xl font-bold text-zinc-900 mb-2 outfit">{tier.name}</h3>
-                <p className="text-sm text-zinc-500 mb-6 font-medium">{tier.desc}</p>
-                <div className="space-y-4 mb-8">
-                  {tier.perks.map((perk, j) => (
-                    <div key={j} className="flex items-center gap-3 text-sm text-zinc-700">
-                      <CheckCircle2 size={16} className="text-primary shrink-0" />
-                      <span>{perk}</span>
-                    </div>
-                  ))}
-                </div>
-                <a 
-                  href="https://wa.me/6281234567890" 
-                  className={`block w-full text-center py-3 rounded-xl font-bold transition-all ${tier.recommended ? 'bg-primary text-white hover:bg-primary-hover shadow-lg shadow-amber-500/20' : 'bg-zinc-100 text-zinc-900 hover:bg-zinc-200'}`}
+          <div className="flex flex-col gap-12">
+            {/* Category Tabs */}
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+              {["Hemat", "Populer", "Serius", "Strategic"].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setIsTierTab(cat)}
+                  className={`px-6 py-3 rounded-2xl text-sm font-bold transition-all ${isTierTab === cat ? 'bg-primary text-white shadow-lg shadow-amber-500/20' : 'bg-white text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 border border-zinc-200'}`}
                 >
-                  Pilih Paket
-                </a>
-              </div>
-            ))}
+                  {cat === "Hemat" && "Paket Hemat (< 1jt)"}
+                  {cat === "Populer" && "Paket Populer (1-2jt)"}
+                  {cat === "Serius" && "Paket Serius (2-5jt)"}
+                  {cat === "Strategic" && "Paket Strategic (> 10jt)"}
+                </button>
+              ))}
+            </div>
+
+            {/* Tiers Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {allTiers.filter(t => t.category === isTierTab).map((tier, i) => (
+                <div key={i} className={`relative group rounded-[2.5rem] p-8 transition-all hover:translate-y-[-8px] ${tier.recommended ? 'bg-white border-2 border-primary shadow-2xl shadow-amber-500/10' : 'bg-white border border-zinc-200 shadow-sm hover:shadow-xl'}`}>
+                  {tier.recommended && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/30">
+                      Pilihan Terbaik
+                    </div>
+                  )}
+                  
+                  {/* Package Image Placeholder / Tag */}
+                  <div className="mb-6 aspect-video rounded-3xl bg-zinc-100 overflow-hidden relative border border-zinc-100">
+                    <img 
+                      src={`https://picsum.photos/400/225?random=${i+100}`} 
+                      alt={tier.name} 
+                      className="h-full w-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                    />
+                    <div className="absolute top-4 right-4 bg-zinc-900/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold">
+                      {tier.tag}
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-zinc-900 mb-1 outfit">{tier.name}</h3>
+                  <p className="text-xs text-zinc-400 mb-4 font-bold uppercase tracking-widest">{tier.desc}</p>
+                  
+                  <div className="mb-8">
+                    <span className="text-3xl font-extrabold text-zinc-900 outfit">Rp {tier.price}</span>
+                    <p className="mt-2 text-sm text-zinc-500 leading-relaxed min-h-[40px]">
+                      {tier.summary}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 mb-10">
+                    {tier.perks.map((perk, j) => (
+                      <div key={j} className="flex items-center gap-3 text-sm text-zinc-700 font-medium">
+                        <CheckCircle2 size={16} className="text-primary shrink-0" />
+                        <span>{perk}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a 
+                    href={`https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20tertarik%20dengan%20${tier.name}.`} 
+                    className={`block w-full text-center py-4 rounded-2xl font-bold transition-all ${tier.recommended ? 'bg-primary text-white hover:bg-primary-hover shadow-lg shadow-amber-500/20' : 'bg-zinc-100 text-zinc-900 hover:bg-zinc-200'}`}
+                  >
+                    Ambil Paket Ini
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
