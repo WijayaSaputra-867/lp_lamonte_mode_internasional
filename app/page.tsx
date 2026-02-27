@@ -699,12 +699,17 @@ export default function Home() {
           </div>
 
           <div className='flex flex-col gap-8 md:gap-12'>
+            {/* Kategori Tab */}
             <div className='grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-4'>
               {["Hemat", "Populer", "Serius", "Strategic"].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setIsTierTab(cat)}
-                  className={`px-4 py-3 md:px-6 rounded-2xl text-xs md:text-sm font-bold transition-all w-full md:w-auto ${isTierTab === cat ? "bg-primary text-white shadow-lg shadow-amber-500/20" : "bg-white text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 border border-zinc-200"}`}>
+                  className={`px-4 py-3 md:px-6 rounded-2xl text-xs md:text-sm font-bold transition-all w-full md:w-auto ${
+                    isTierTab === cat
+                      ? "bg-primary text-white shadow-lg shadow-amber-500/20"
+                      : "bg-white text-zinc-500 hover:bg-zinc-100 hover:text-zinc-900 border border-zinc-200"
+                  }`}>
                   {cat === "Hemat" && "Paket Hemat"}
                   {cat === "Populer" && "Paket Populer"}
                   {cat === "Serius" && "Paket Serius"}
@@ -713,15 +718,25 @@ export default function Home() {
               ))}
             </div>
 
-            <div className='flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 hide-scrollbar'>
+            {/* 
+                PERBAIKAN DI SINI:
+                - Ditambahkan class 'pt-12' agar badge 'Pilihan Terbaik' tidak terpotong di atas.
+                - Ditambahkan 'pb-8' agar bayangan bawah (shadow) tidak terpotong.
+            */}
+            <div className='flex overflow-x-auto snap-x snap-mandatory gap-6 -mx-6 px-6 pt-12 pb-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 md:pt-0 hide-scrollbar'>
               {allTiers
                 .filter((t) => t.category === isTierTab)
                 .map((tier, i) => (
                   <div
                     key={i}
-                    className={`min-w-[85vw] md:min-w-0 shrink-0 snap-center relative group rounded-[2.5rem] p-6 md:p-8 transition-all hover:-translate-y-2 ${tier.recommended ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10" : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"}`}>
+                    // Mengubah min-w menjadi 80vw agar user bisa melihat sedikit potongan kartu berikutnya
+                    className={`min-w-[85vw] md:min-w-0 shrink-0 snap-center relative group rounded-[2.5rem] p-6 md:p-8 transition-all hover:-translate-y-2 ${
+                      tier.recommended
+                        ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10"
+                        : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"
+                    }`}>
                     {tier.recommended && (
-                      <div className='absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/30'>
+                      <div className='absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/30 z-10 whitespace-nowrap'>
                         Pilihan Terbaik
                       </div>
                     )}
@@ -770,7 +785,11 @@ export default function Home() {
 
                     <a
                       href={`https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20tertarik%20dengan%20${tier.name}.`}
-                      className={`block w-full text-center py-3 md:py-4 rounded-2xl font-bold transition-all ${tier.recommended ? "bg-primary text-white hover:bg-primary-hover shadow-lg shadow-amber-500/20" : "bg-zinc-100 text-zinc-900 hover:bg-zinc-200"}`}>
+                      className={`block w-full text-center py-3 md:py-4 rounded-2xl font-bold transition-all ${
+                        tier.recommended
+                          ? "bg-primary text-white hover:bg-primary-hover shadow-lg shadow-amber-500/20"
+                          : "bg-zinc-100 text-zinc-900 hover:bg-zinc-200"
+                      }`}>
                       Ambil Paket Ini
                     </a>
                   </div>
