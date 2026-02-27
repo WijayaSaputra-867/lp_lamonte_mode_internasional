@@ -502,7 +502,7 @@ export default function Home() {
                         ))}
                       </div>
                     </div>
-                    <div className='absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity bg-gradient-to-l from-amber-500 to-transparent'></div>
+                    <div className='absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity bg-linear-to-l from-amber-500 to-transparent'></div>
                   </div>
                 );
               }
@@ -522,7 +522,7 @@ export default function Home() {
                   <p className='text-zinc-500 font-medium text-sm mb-4'>
                     {feature.subtitle}
                   </p>
-                  <p className='text-zinc-600 text-base leading-relaxed mb-8 flex-grow'>
+                  <p className='text-zinc-600 text-base leading-relaxed mb-8 grow'>
                     {feature.desc}
                   </p>
                   <div
@@ -623,7 +623,7 @@ export default function Home() {
                     <div
                       key={i}
                       className='group relative glass-dark rounded-3xl p-4 transition-all hover:bg-white border-zinc-100 hover:shadow-xl hover:shadow-zinc-200/50'>
-                      <div className='aspect-[3/4] overflow-hidden rounded-2xl bg-zinc-100 mb-4 relative'>
+                      <div className='aspect-3/4 overflow-hidden rounded-2xl bg-zinc-100 mb-4 relative'>
                         <img
                           src={`https://picsum.photos/400/500?random=${i + 50}`}
                           alt={prod.name}
@@ -717,7 +717,7 @@ export default function Home() {
                 .map((tier, i) => (
                   <div
                     key={i}
-                    className={`min-w-[85vw] md:min-w-0 flex-shrink-0 snap-center relative group rounded-[2.5rem] p-6 md:p-8 transition-all hover:translate-y-[-8px] ${tier.recommended ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10" : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"}`}>
+                    className={`min-w-[85vw] md:min-w-0 shrink-0 snap-center relative group rounded-[2.5rem] p-6 md:p-8 transition-all hover:translate-y-[-8px] ${tier.recommended ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10" : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"}`}>
                     {tier.recommended && (
                       <div className='absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/30'>
                         Pilihan Terbaik
@@ -747,7 +747,7 @@ export default function Home() {
                       <span className='text-2xl md:text-3xl font-extrabold text-zinc-900 outfit'>
                         Rp {tier.price}
                       </span>
-                      <p className='mt-2 text-sm text-zinc-500 leading-relaxed min-h-[40px]'>
+                      <p className='mt-2 text-sm text-zinc-500 leading-relaxed min-h-10'>
                         {tier.summary}
                       </p>
                     </div>
@@ -868,8 +868,8 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <p className='text-zinc-600 text-lg italic leading-relaxed mb-8 flex-grow'>
-                  "{testimonial.text}"
+                <p className='text-zinc-600 text-lg italic leading-relaxed mb-8 grow'>
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <div className='flex items-center gap-4 pt-6 border-t border-zinc-100'>
                   <div className='h-12 w-12 rounded-full overflow-hidden border-2 border-primary/20'>
@@ -1012,8 +1012,8 @@ export default function Home() {
       {/* Final CTA */}
       <section className='py-24 relative overflow-hidden bg-white'>
         <div className='mx-auto max-w-5xl px-6'>
-          <div className='relative rounded-[2.5rem] p-12 md:p-20 text-center border border-zinc-100 bg-gradient-to-b from-amber-50/50 to-white overflow-hidden shadow-2xl shadow-zinc-200/50'>
-            <div className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full pointer-events-none'></div>
+          <div className='relative rounded-[2.5rem] p-12 md:p-20 text-center border border-zinc-100 bg-linear-to-b from-amber-50/50 to-white overflow-hidden shadow-2xl shadow-zinc-200/50'>
+            <div className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/10 blur-[100px] rounded-full pointer-events-none'></div>
 
             <h2 className='text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl md:text-5xl outfit mb-8 leading-[1.2]'>
               Siap Mengubah Finansial Anda dengan <br /> Bisnis Fashion Anak?
