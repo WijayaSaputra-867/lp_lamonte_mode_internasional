@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -24,18 +25,23 @@ export default function Hero() {
             <span className='italic'>Keunggulan</span> Bersama.
           </h1>
 
-          <p className='mt-12 max-w-2xl text-lg md:text-xl font-serif italic text-secondary/60 leading-relaxed animate-in fade-in slide-in-from-bottom duration-1000 delay-400'>
+          <p className='mt-12 max-w-2xl text-lg md:text-xl font-serif font-semibold text-secondary leading-relaxed animate-in fade-in slide-in-from-bottom duration-1000 delay-400'>
             Di Lamonte, kami percaya bahwa sukses sejati dibangun di atas
             kepercayaan dan kualitas tanpa kompromi. Temukan kemitraan yang
             memberdayakan Anda untuk tumbuh lebih dari sekadar angka.
           </p>
 
           <div className='mt-16 flex flex-col sm:flex-row items-center gap-8 sm:gap-12 animate-in fade-in slide-in-from-bottom duration-1000 delay-600'>
-            <a
-              href='#tiers'
-              className='px-8 py-4 bg-primary text-secondary text-[10px] font-sans font-black tracking-[0.3em] uppercase hover:bg-white hover:text-secondary hover:shadow-xl transition-all duration-500 shadow-lg'>
-              Jelajahi Paket
-            </a>
+            <div className='flex flex-col gap-4'>
+              <a
+                href='#tiers'
+                className='px-10 py-5 bg-primary text-secondary text-[11px] font-sans font-black tracking-[0.4em] uppercase hover:bg-yellow-300 hover:shadow-2xl transition-all duration-500 shadow-lg rounded-xl'>
+                Lihat Semua Paket
+              </a>
+              <span className='text-[10px] text-primary font-sans font-bold tracking-widest uppercase text-center'>
+                Mulai dari Rp1 juta
+              </span>
+            </div>
 
             <a
               href='https://www.youtube.com/watch?v=i8ol6RhnD60&list=PLS-ocOMZnLn77hvXu6rdq4KeFHg-ul9ES'
@@ -54,6 +60,46 @@ export default function Hero() {
                 </span>
               </div>
             </a>
+          </div>
+
+          <div className='mt-20 w-full max-w-4xl border-t-2 border-primary/30 pt-12'>
+            <p className='text-sm text-secondary font-sans font-bold tracking-widest mb-8 uppercase'>
+              Paket yang Kami Tawarkan:
+            </p>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+              <div className='text-center'>
+                <div className='text-3xl font-serif font-black text-primary mb-3'>
+                  4
+                </div>
+                <p className='text-sm font-sans font-semibold text-secondary'>
+                  Kategori Paket
+                </p>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-serif font-black text-primary mb-3'>
+                  10+
+                </div>
+                <p className='text-sm font-sans font-semibold text-secondary'>
+                  Pilihan Harga
+                </p>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-serif font-black text-primary mb-3'>
+                  7
+                </div>
+                <p className='text-sm font-sans font-semibold text-secondary'>
+                  Modul Lengkap
+                </p>
+              </div>
+              <div className='text-center'>
+                <div className='text-3xl font-serif font-black text-primary mb-3'>
+                  ∞
+                </div>
+                <p className='text-sm font-sans font-semibold text-secondary'>
+                  Custom Paket
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

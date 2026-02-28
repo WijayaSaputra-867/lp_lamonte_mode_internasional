@@ -35,7 +35,7 @@ const FEATURES_DATA = [
     desc: "Ubah toko kecil menjadi toko resmi dengan paket identitas merek lengkap. Anda akan menerima desain sertifikat kemitraan eksklusif, templat kartu identitas, banner toko fisik/online, dan set templat linimasa Instagram seragam untuk membangun kepercayaan pembeli secara instan.",
     badge: "Branding Profesional & Terpercaya",
     icon: ShieldCheck,
-    colors: { bg: "bg-blue-50", text: "text-blue-600" },
+    colors: { bg: "bg-surface-muted", text: "text-secondary" },
     isLarge: false,
   },
   {
@@ -45,7 +45,7 @@ const FEATURES_DATA = [
     desc: "Hilangkan kebingungan finansial dengan Kalkulator Profit Otomatis. Cukup masukkan modal awal, dan sistem akan menghitung target harian, harga jual ideal sesuai pasar, serta simulasi skenario promo untuk memastikan setiap penjualan menghasilkan margin yang sehat.",
     badge: "Bisnis Berbasis Data, Bukan Perasaan",
     icon: TrendingUp,
-    colors: { bg: "bg-purple-50", text: "text-purple-600" },
+    colors: { bg: "bg-surface-muted", text: "text-secondary" },
     isLarge: false,
   },
   {
@@ -55,7 +55,7 @@ const FEATURES_DATA = [
     desc: "Kuasai seni konten visual tanpa kamera mahal. Kami memberikan panduan teknik foto produk menggunakan ponsel pintar, teknik pencahayaan praktis, serta akses ke ribuan stok foto katalog model profesional yang siap Anda unggah kapan saja.",
     badge: "Visual Setara Merek Internasional",
     icon: ShoppingBag,
-    colors: { bg: "bg-pink-50", text: "text-pink-600" },
+    colors: { bg: "bg-surface-muted", text: "text-secondary" },
     isLarge: false,
   },
   {
@@ -65,7 +65,7 @@ const FEATURES_DATA = [
     desc: "Panduan teknis langkah demi langkah mendominasi Shopee, Tokopedia, dan TikTok Shop. Dapatkan cetak biru optimasi judul (SEO), deskripsi produk persuasif, teknik riset kata kunci, dan strategi diskon yang meningkatkan visibilitas produk di hasil pencarian teratas.",
     badge: "Optimasi Marketplace & Trafik Tinggi",
     icon: Package,
-    colors: { bg: "bg-orange-50", text: "text-orange-600" },
+    colors: { bg: "bg-surface-muted", text: "text-secondary" },
     isLarge: false,
   },
   {
@@ -75,7 +75,7 @@ const FEATURES_DATA = [
     desc: "Tingkatkan konversi penjualan dengan skrip penutupan yang sudah teruji. Kami menyediakan templat chat otomatis untuk berbagai skenario: dari sapaan awal, menangani keberatan harga, hingga tindak lanjut pesanan yang belum dibayar. Bisa diintegrasikan dengan alat otomasi WA.",
     badge: "Sistem Closing Otomatis 24/7",
     icon: ShoppingBag,
-    colors: { bg: "bg-emerald-50", text: "text-emerald-600" },
+    colors: { bg: "bg-surface-muted", text: "text-secondary" },
     isLarge: false,
   },
   {
@@ -85,7 +85,7 @@ const FEATURES_DATA = [
     desc: "Jangan pernah kehabisan ide posting lagi. Dapatkan kalender konten setahun penuh yang mencakup ide postingan harian, contoh takarir yang menarik interaksi, pembuka video pendek yang viral, dan ajakan bertindak (CTA) yang mendorong penjualan langsung.",
     badge: "Konsistensi Branding Tanpa Pusing",
     icon: Zap,
-    colors: { bg: "bg-red-50", text: "text-red-600" },
+    colors: { bg: "bg-surface-muted", text: "text-secondary" },
     isLarge: false,
   },
   {
@@ -95,7 +95,7 @@ const FEATURES_DATA = [
     desc: "Dukungan penuh melalui sesi Zoom langsung rutin dan grup diskusi eksklusif. Pelajari pembaruan tren busana anak terbaru, studi kasus nyata dari mitra sukses, dan dapatkan jawaban langsung atas tantangan operasional harian Anda. Anda tidak akan pernah berjalan sendiri dalam membangun bisnis ini.",
     badge: "Dukungan Komunitas & Mentoring Penuh",
     icon: Users,
-    colors: { bg: "bg-amber-50", text: "text-amber-600" },
+    colors: { bg: "bg-primary/10", text: "text-primary" },
     isLarge: true,
   },
 ];
