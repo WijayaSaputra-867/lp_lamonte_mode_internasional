@@ -4,7 +4,11 @@
 import React from "react";
 import { Play } from "lucide-react";
 
-export default function Hero() {
+interface HeroProps {
+  setIsTierTab?: (tab: string) => void;
+}
+
+export default function Hero({ setIsTierTab }: HeroProps) {
   return (
     <header className='relative min-h-screen flex items-center overflow-hidden bg-background pt-20'>
       {/* Background patterns - subtle and editorial */}
@@ -38,9 +42,14 @@ export default function Hero() {
                 className='px-10 py-5 bg-primary text-secondary text-[11px] font-sans font-black tracking-[0.4em] uppercase hover:bg-yellow-300 hover:shadow-2xl transition-all duration-500 shadow-lg rounded-xl'>
                 Lihat Semua Paket
               </a>
-              <span className='text-[10px] text-primary font-sans font-bold tracking-widest uppercase text-center'>
-                Mulai dari Rp1 juta
-              </span>
+              <div className='text-center'>
+                <span className='text-[12px] text-gray-600 font-sans font-semibold tracking-wide uppercase block mb-2'>
+                  Paket Mulai dari
+                </span>
+                <span className='text-3xl font-serif font-black text-primary'>
+                  Rp 1 Juta
+                </span>
+              </div>
             </div>
 
             <a
@@ -62,42 +71,102 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className='mt-20 w-full max-w-4xl border-t-2 border-primary/30 pt-12'>
-            <p className='text-sm text-secondary font-sans font-bold tracking-widest mb-8 uppercase'>
-              Paket yang Kami Tawarkan:
+          <div className='mt-20 w-full bg-linear-to-r from-primary/10 to-yellow-100 border-2 border-primary/30 rounded-3xl p-8 md:p-12'>
+            <p className='text-center text-sm text-secondary font-sans font-bold tracking-widest mb-10 uppercase'>
+              Paket Rekomendasi untuk Pemula
             </p>
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-              <div className='text-center'>
-                <div className='text-3xl font-serif font-black text-primary mb-3'>
-                  4
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <div className='bg-white rounded-2xl p-6 shadow-md border-2 border-primary/20'>
+                <h3 className='text-2xl font-serif font-bold text-secondary mb-4'>
+                  Paket Hemat
+                </h3>
+                <div className='flex items-baseline gap-2 mb-4'>
+                  <span className='text-sm font-sans text-primary font-semibold'>
+                    Rp
+                  </span>
+                  <span className='text-4xl font-serif font-black text-primary'>
+                    650 Ribu
+                  </span>
+                  <span className='text-xs text-gray-600 font-sans'>
+                    /bulan
+                  </span>
                 </div>
-                <p className='text-sm font-sans font-semibold text-secondary'>
-                  Kategori Paket
+                <p className='text-sm text-gray-700 mb-6 font-sans font-semibold'>
+                  Untuk memulai usaha pertama Anda
                 </p>
+                <button
+                  onClick={() => {
+                    setIsTierTab?.("Hemat");
+                    document
+                      .getElementById("tiers")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className='w-full text-center py-3 bg-primary/10 text-primary font-sans font-bold text-sm uppercase rounded-lg hover:bg-primary/20 transition-all duration-300'>
+                  Pelajari Paket
+                </button>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-serif font-black text-primary mb-3'>
-                  10+
+
+              <div className='bg-linear-to-br from-primary to-primary/90 rounded-2xl p-6 shadow-2xl border-3 border-yellow-300 relative -translate-y-3'>
+                <div className='absolute -top-5 left-1/2 -translate-x-1/2 bg-yellow-300 text-primary px-8 py-2 rounded-full text-[13px] font-sans font-black whitespace-nowrap'>
+                  ⭐ PALING POPULER
                 </div>
-                <p className='text-sm font-sans font-semibold text-secondary'>
-                  Pilihan Harga
+                <h3 className='text-2xl font-serif font-bold text-white mb-4 mt-2'>
+                  Paket Populer
+                </h3>
+                <div className='flex items-baseline gap-2 mb-4'>
+                  <span className='text-sm font-sans text-yellow-200 font-semibold'>
+                    Rp
+                  </span>
+                  <span className='text-4xl font-serif font-black text-white'>
+                    1.8 Juta
+                  </span>
+                  <span className='text-xs text-yellow-100 font-sans'>
+                    /bulan
+                  </span>
+                </div>
+                <p className='text-sm text-white mb-6 font-sans font-semibold'>
+                  Pilihan terbaik untuk pertumbuhan maksimal
                 </p>
+                <button
+                  onClick={() => {
+                    setIsTierTab?.("Populer");
+                    document
+                      .getElementById("tiers")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className='w-full text-center py-3 bg-white text-primary font-sans font-bold text-sm uppercase rounded-lg hover:bg-yellow-100 transition-all duration-300'>
+                  Pilih Paket Ini
+                </button>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-serif font-black text-primary mb-3'>
-                  7
+
+              <div className='bg-white rounded-2xl p-6 shadow-md border-2 border-primary/20'>
+                <h3 className='text-2xl font-serif font-bold text-secondary mb-4'>
+                  Paket Serius
+                </h3>
+                <div className='flex items-baseline gap-2 mb-4'>
+                  <span className='text-sm font-sans text-primary font-semibold'>
+                    Rp
+                  </span>
+                  <span className='text-4xl font-serif font-black text-primary'>
+                    2.25 Juta
+                  </span>
+                  <span className='text-xs text-gray-600 font-sans'>
+                    /bulan
+                  </span>
                 </div>
-                <p className='text-sm font-sans font-semibold text-secondary'>
-                  Modul Lengkap
+                <p className='text-sm text-gray-700 mb-6 font-sans font-semibold'>
+                  Untuk yang serius membangun bisnis
                 </p>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-serif font-black text-primary mb-3'>
-                  ∞
-                </div>
-                <p className='text-sm font-sans font-semibold text-secondary'>
-                  Custom Paket
-                </p>
+                <button
+                  onClick={() => {
+                    setIsTierTab?.("Serius");
+                    document
+                      .getElementById("tiers")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className='w-full text-center py-3 bg-primary/10 text-primary font-sans font-bold text-sm uppercase rounded-lg hover:bg-primary/20 transition-all duration-300'>
+                  Pelajari Paket
+                </button>
               </div>
             </div>
           </div>

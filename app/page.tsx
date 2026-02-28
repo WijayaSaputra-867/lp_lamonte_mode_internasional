@@ -327,7 +327,7 @@ export default function Home() {
   return (
     <div className='relative isolate overflow-hidden bg-background'>
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <Hero />
+      <Hero setIsTierTab={setIsTierTab} />
       <Features
         featuresToRender={featuresToRender}
         isMobile={isMobile}
