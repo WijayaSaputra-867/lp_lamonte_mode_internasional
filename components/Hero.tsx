@@ -39,7 +39,7 @@ export default function Hero() {
               <div className="h-[60px] w-px bg-secondary group-hover:h-[80px] group-hover:bg-primary transition-all duration-700"></div>
             </a>
 
-            <button className="flex items-center gap-6 group">
+            <a href="https://www.youtube.com/watch?v=i8ol6RhnD60&list=PLS-ocOMZnLn77hvXu6rdq4KeFHg-ul9ES" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 group">
               <div className="h-16 w-16 rounded-full border border-secondary/20 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-500">
                 <Play size={20} fill="currentColor" strokeWidth={0} />
               </div>
@@ -47,7 +47,7 @@ export default function Hero() {
                 <span className="block text-[10px] font-sans font-black tracking-[0.2em] text-zinc-400 uppercase mb-1">Our Philosophy</span>
                 <span className="text-sm font-serif italic text-secondary">Watch our story</span>
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </div>
