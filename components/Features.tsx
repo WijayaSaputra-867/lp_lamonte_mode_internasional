@@ -37,10 +37,10 @@ export default function Features({
       <div className='mx-auto max-w-7xl px-6 relative z-10'>
         <div className='mb-24 flex flex-col items-center text-center'>
           <span className='text-[10px] font-sans font-black tracking-[0.5em] text-zinc-400 uppercase mb-6'>
-            Ekosistem Dukungan
+            Fasilitas Setiap Paket
           </span>
           <h2 className='text-5xl md:text-8xl font-serif font-light text-secondary leading-tight tracking-tight'>
-            Pemberdayaan <br /> <span className='italic'>Komprehensif.</span>
+            Apa Saja yang <br /> <span className='italic'>Anda Dapatkan?</span>
           </h2>
           <div className='h-16 w-px bg-primary mt-12'></div>
         </div>
@@ -83,7 +83,7 @@ export default function Features({
             <button
               onClick={handleLoadMore}
               className='text-[10px] font-sans font-black uppercase tracking-[0.4em] text-secondary border-b border-primary pb-2 hover:text-primary transition-colors'>
-              Temukan Lebih Banyak
+              Lihat Semua Fasilitas
             </button>
           </div>
         )}

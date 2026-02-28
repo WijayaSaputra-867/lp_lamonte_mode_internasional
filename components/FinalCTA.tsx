@@ -11,19 +11,19 @@ export default function FinalCTA() {
           <div className='mb-12 inline-flex items-center gap-4'>
             <span className='h-px w-10 bg-primary'></span>
             <span className='text-[10px] font-sans font-black tracking-[0.4em] text-secondary uppercase'>
-              Bergabunglah dengan Warisan
+              Wujudkan Bisnis Anda
             </span>
             <span className='h-px w-10 bg-primary'></span>
           </div>
 
           <h2 className='text-5xl md:text-8xl lg:text-[100px] font-serif font-light text-secondary leading-[0.9] tracking-tight mb-16'>
-            Siap Membangun <br /> Sesuatu yang{" "}
-            <span className='italic'>Bermakna?</span>
+            Pilih Paket Anda <br />{" "}
+            <span className='italic'>Sekarang!</span>
           </h2>
 
           <p className='text-xl md:text-2xl font-serif italic text-secondary/60 max-w-2xl leading-relaxed mb-20'>
-            Jadilah bagian dari perjalanan kami dalam menghadirkan kualitas
-            terbaik untuk generasi masa depan Indonesia.
+            Jangan tunda kesuksesan Anda. Hubungi kami hari ini dan mulailah
+            menghasilkan profit dari bisnis busana anak.
           </p>
 
           <a
@@ -33,7 +33,7 @@ export default function FinalCTA() {
               <ArrowRight size={32} strokeWidth={1} />
             </div>
             <span className='text-xs font-sans font-black tracking-[0.5em] text-secondary uppercase'>
-              Jadilah Mitra
+              Hubungi Spesialis Paket
             </span>
           </a>
         </div>

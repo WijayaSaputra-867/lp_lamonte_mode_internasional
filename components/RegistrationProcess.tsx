@@ -4,20 +4,20 @@ import React from "react";
 
 const STEPS = [
   {
-    title: "Panggilan Awal",
-    desc: "Hubungi spesialis kami melalui WhatsApp untuk mendiskusikan visi dan kebutuhan bisnis Anda secara personal.",
+    title: "Konsultasi",
+    desc: "Hubungi tim ahli kami melalui WhatsApp untuk mendapatkan rekomendasi paket yang paling pas dengan budget Anda.",
   },
   {
-    title: "Visi & Seleksi",
-    desc: "Pilih paket kemitraan yang paling sesuai dengan target pertumbuhan Anda. Kami akan membantu proses verifikasi.",
+    title: "Pilih Paket",
+    desc: "Tentukan paket usaha yang Anda inginkan. Kami menyediakan dari skala coba-coba hingga paket buka toko.",
   },
   {
-    title: "Orientasi Awal",
-    desc: "Terima paket fisik dan akses digital ke seluruh ekosistem Lamonte. Sesi mentoring pertama dimulai di sini.",
+    title: "Pembayaran & Pengiriman",
+    desc: "Selesaikan administrasi, dan paket berisi stok baju siap jual beserta atribut branding akan segera kami kirim.",
   },
   {
-    title: "Warisan Terbangun",
-    desc: "Mulai perjalanan Anda membangun bisnis yang tidak hanya menguntungkan, tapi juga membanggakan.",
+    title: "Mulai Berjualan",
+    desc: "Ikuti panduan strategi jualan dan mentoring eksklusif dari kami untuk segera meraup keuntungan pertama Anda.",
   },
 ];
 
@@ -28,15 +28,15 @@ export default function RegistrationProcess() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-24 items-start'>
           <div>
             <span className='text-[10px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mb-6 block'>
-              Perjalanan Dimulai
+              Mulai Berbisnis
             </span>
             <h2 className='text-4xl md:text-7xl font-serif font-light text-secondary leading-tight mb-12'>
-              Langkah Menuju <br />{" "}
-              <span className='italic'>Kemitraan Sejati.</span>
+              Cara Memesan <br />{" "}
+              <span className='italic'>Paket Anda.</span>
             </h2>
             <p className='text-lg font-serif italic text-secondary/60 leading-relaxed max-w-md'>
-              Proses yang sederhana untuk memastikan kita memiliki visi yang
-              sama dalam membangun masa depan fashion anak.
+              Hanya butuh 4 langkah mudah untuk memulai bisnis baju anak Anda
+              sendiri bersama Lamonte.
             </p>
           </div>
 

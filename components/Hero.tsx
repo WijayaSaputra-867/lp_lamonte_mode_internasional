@@ -19,20 +19,21 @@ export default function Hero({ setIsTierTab }: HeroProps) {
           <div className='mb-12 inline-flex items-center gap-4 animate-in fade-in slide-in-from-bottom duration-1000'>
             <span className='h-px w-10 bg-primary'></span>
             <span className='text-[10px] md:text-xs font-sans font-black tracking-[0.4em] text-secondary uppercase'>
-              Seni Kemitraan
+              Solusi Bisnis Baju Anak
             </span>
             <span className='h-px w-10 bg-primary'></span>
           </div>
 
-          <h1 className='text-5xl md:text-8xl lg:text-[120px] font-serif font-light text-secondary leading-[0.85] tracking-tight animate-in fade-in slide-in-from-bottom duration-1000 delay-200'>
-            Membangun <br />
-            <span className='italic'>Keunggulan</span> Bersama.
+          <h1 className='text-5xl md:text-7xl lg:text-[100px] font-serif font-light text-secondary leading-[0.9] tracking-tight animate-in fade-in slide-in-from-bottom duration-1000 delay-200'>
+            Pilihan Paket Lengkap <br />
+            untuk <span className='italic'>Usaha Anda.</span>
           </h1>
 
-          <p className='mt-12 max-w-2xl text-lg md:text-xl font-serif font-semibold text-secondary leading-relaxed animate-in fade-in slide-in-from-bottom duration-1000 delay-400'>
-            Di Lamonte, kami percaya bahwa sukses sejati dibangun di atas
-            kepercayaan dan kualitas tanpa kompromi. Temukan kemitraan yang
-            memberdayakan Anda untuk tumbuh lebih dari sekadar angka.
+          <p className='mt-10 max-w-3xl text-lg md:text-xl font-serif font-semibold text-secondary leading-relaxed animate-in fade-in slide-in-from-bottom duration-1000 delay-400'>
+            Mulai dari Rp 650 Ribu, miliki stok baju anak premium siap jual.
+            Kami menyediakan berbagai pilihan paket kemitraan yang dirancang
+            khusus menyesuaikan skala dan modal bisnis Anda—dari sekadar coba-coba
+            hingga serius membangun toko offline.
           </p>
 
           <div className='mt-16 flex flex-col sm:flex-row items-center gap-8 sm:gap-12 animate-in fade-in slide-in-from-bottom duration-1000 delay-600'>

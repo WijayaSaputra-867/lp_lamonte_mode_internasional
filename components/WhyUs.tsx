@@ -14,27 +14,25 @@ export default function WhyUs() {
             <div className='mb-12 inline-flex items-center gap-4'>
               <span className='h-px w-8 bg-primary'></span>
               <span className='text-[10px] font-sans font-black tracking-[0.4em] text-secondary uppercase'>
-                Filosofi Etis
+                Keunggulan Paket Kami
               </span>
             </div>
 
             <h2 className='text-5xl md:text-7xl font-serif font-light text-secondary leading-[1.1] mb-10'>
-              Membangun Masa Depan Melalui{" "}
-              <span className='italic'>Kualitas.</span>
+              Jaminan Sukses <br />
+              <span className='italic'>Bisnis Anda.</span>
             </h2>
 
             <div className='space-y-8 font-serif text-lg text-secondary/70 leading-relaxed italic'>
               <p>
-                Kami percaya bahwa di balik setiap helai pakaian, terdapat
-                cerita tentang dedikasi dan kejujuran. Produksi kami bukan
-                sekadar memenuhi permintaan pasar, tapi menjaga standar yang
-                telah kami bangun selama 13 tahun.
+                Setiap paket bisnis kami rancang dari pengalaman nyata selama 13
+                tahun. Anda tak perlu memikirkan riset produk, model, atau stok
+                mati—karena data penjualan kami yang akan bekerja untuk Anda.
               </p>
               <p>
-                Dengan memiliki fasilitas produksi sendiri, kami memastikan
-                setiap tangan yang bekerja mendapatkan apresiasi yang layak, dan
-                setiap produk yang Anda terima adalah perwujudan dari ketelitian
-                yang tulus.
+                Melalui fasilitas produksi sendiri, kami berani menjamin setiap
+                paket memberikan margin yang besar dengan kualitas jahitan butik
+                premium yang sudah teruji di pasaran internasional maupun lokal.
               </p>
             </div>
 
@@ -60,7 +58,7 @@ export default function WhyUs() {
             <a
               href='#tiers'
               className='mt-16 inline-flex items-center gap-4 text-[10px] font-sans font-black uppercase tracking-[0.3em] text-secondary group'>
-              Bergabung dalam Misi Kami
+              Pilih Paket Anda Sekarang
               <div className='h-10 w-10 flex items-center justify-center border border-secondary/20 rounded-full group-hover:bg-secondary group-hover:text-white transition-all'>
                 <ArrowRight size={14} />
               </div>
