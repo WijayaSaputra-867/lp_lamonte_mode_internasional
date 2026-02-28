@@ -33,7 +33,7 @@ export default function Hero() {
           <div className='mt-16 flex flex-col sm:flex-row items-center gap-8 sm:gap-12 animate-in fade-in slide-in-from-bottom duration-1000 delay-600'>
             <a
               href='#tiers'
-              className='px-8 py-4 border border-secondary/20 text-[10px] font-sans font-black tracking-[0.3em] text-secondary uppercase hover:bg-secondary hover:text-white transition-all duration-500'>
+              className='px-8 py-4 bg-primary text-secondary text-[10px] font-sans font-black tracking-[0.3em] uppercase hover:bg-white hover:text-secondary hover:shadow-xl transition-all duration-500 shadow-lg'>
               Jelajahi Paket
             </a>
 

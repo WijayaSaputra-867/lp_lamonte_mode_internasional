@@ -80,8 +80,13 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
             ))}
           </div>
 
-          {/* Icons */}
-          <div className='flex items-center gap-6'>
+          {/* Icons & CTA */}
+          <div className='flex items-center gap-4 md:gap-6'>
+            <a
+              href='#tiers'
+              className='hidden md:flex items-center justify-center px-6 py-2.5 bg-primary text-secondary text-[10px] font-sans font-black tracking-[0.2em] uppercase hover:bg-white hover:shadow-lg transition-all duration-300'>
+              Lihat Paket
+            </a>
             <a
               href='https://wa.me/628111189921'
               className='relative h-10 w-10 flex items-center justify-center text-secondary hover:text-primary transition-colors'>
@@ -115,8 +120,6 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
               { label: "Cerita Kami", href: "#features" },
               { label: "Koleksi", href: "#catalog" },
               { label: "Filosofi", href: "#why-us" },
-              { label: "Kemitraan", href: "#tiers" },
-              { label: "Pendaftaran", href: "#registration" },
             ].map((link) => (
               <a
                 key={link.label}
@@ -126,6 +129,21 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
                 {link.label}
               </a>
             ))}
+            
+            {/* Highlighted Kemitraan Link */}
+            <a
+              href="#tiers"
+              onClick={() => setIsMenuOpen(false)}
+              className='text-3xl font-serif font-medium text-primary lowercase tracking-widest border-b border-primary pb-1 transition-colors'>
+              Kemitraan
+            </a>
+            
+            <a
+              href="#registration"
+              onClick={() => setIsMenuOpen(false)}
+              className='text-3xl font-serif font-light text-secondary lowercase tracking-widest hover:text-primary transition-colors'>
+              Pendaftaran
+            </a>
           </div>
 
           {/* Bottom section */}

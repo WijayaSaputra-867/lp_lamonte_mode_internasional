@@ -335,13 +335,13 @@ export default function Home() {
         handleLoadMore={handleLoadMore}
         shuffledFeaturesLength={shuffledFeatures.length}
       />
-      <WhyUs />
-      <Catalog isMobile={isMobile} />
       <PartnershipTiers
         isTierTab={isTierTab}
         setIsTierTab={setIsTierTab}
         allTiers={allTiers}
       />
+      <WhyUs />
+      <Catalog isMobile={isMobile} />
       <RegistrationProcess />
       <Stats />
       <Testimonials />
