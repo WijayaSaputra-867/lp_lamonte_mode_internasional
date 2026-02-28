@@ -57,26 +57,28 @@ export default function RegistrationProcess() {
           {/* Connector Line (Desktop) */}
           <div className="hidden lg:block absolute top-[60px] left-[5%] right-[5%] h-1 bg-zinc-50 border-y border-zinc-100 pointer-events-none"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative z-10">
             {STEPS.map((step, i) => (
-              <div key={i} className="group flex flex-col items-center text-center">
-                <div className={`relative mb-8 h-24 w-24 flex items-center justify-center rounded-[2rem] ${step.color} text-white shadow-2xl ${step.shadow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                  <step.icon size={40} />
-                  <div className="absolute -top-3 -right-3 h-10 w-10 flex items-center justify-center rounded-2xl bg-zinc-900 text-white text-sm font-black shadow-xl">
+              <div key={i} className="group flex flex-row lg:flex-col items-center lg:items-center text-left lg:text-center gap-6 lg:gap-0">
+                <div className={`relative shrink-0 mb-0 lg:mb-8 h-16 w-16 lg:h-24 lg:w-24 flex items-center justify-center rounded-2xl lg:rounded-[2rem] ${step.color} text-white shadow-xl lg:shadow-2xl ${step.shadow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <step.icon className="w-8 h-8 lg:w-10 lg:h-10" />
+                  <div className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 h-7 w-7 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg lg:rounded-2xl bg-zinc-900 text-white text-[10px] lg:text-sm font-black shadow-xl">
                     {i + 1}
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-extrabold text-zinc-900 outfit mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-zinc-500 font-medium leading-relaxed">
-                  {step.desc}
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-lg lg:text-xl font-extrabold text-zinc-900 outfit mb-1 lg:mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs lg:text-sm text-zinc-500 font-medium leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
                 
                 {i < STEPS.length - 1 && (
-                  <div className="mt-8 lg:hidden">
-                    <div className="h-8 w-px bg-zinc-100"></div>
+                  <div className="hidden md:block lg:hidden absolute -bottom-6 left-1/2 -translate-x-1/2">
+                    <div className="h-6 w-px bg-zinc-100"></div>
                   </div>
                 )}
               </div>
