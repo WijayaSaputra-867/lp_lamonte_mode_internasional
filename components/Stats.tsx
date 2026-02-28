@@ -4,24 +4,24 @@ import React from "react";
 import { Award, Package, Users, TrendingUp } from "lucide-react";
 
 const STATS_DATA = [
-  { label: "Year Established", value: "2011+", icon: Award, color: "text-amber-500", bg: "bg-amber-50" },
-  { label: "Products Sold", value: "500K+", icon: Package, color: "text-pink-500", bg: "bg-pink-50" },
-  { label: "Active Partners", value: "700+", icon: Users, color: "text-sky-500", bg: "bg-sky-50" },
-  { label: "Success Rate", value: "99%", icon: TrendingUp, color: "text-emerald-500", bg: "bg-emerald-50" },
+  { label: "Year Established", value: "2011+", icon: Award, color: "text-amber-600", bg: "bg-amber-50" },
+  { label: "Products Sold", value: "500K+", icon: Package, color: "text-pink-600", bg: "bg-pink-50" },
+  { label: "Active Partners", value: "700+", icon: Users, color: "text-sky-600", bg: "bg-sky-50" },
+  { label: "Success Rate", value: "99%", icon: TrendingUp, color: "text-emerald-600", bg: "bg-emerald-50" },
 ];
 
 export default function Stats() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Decorative dots pattern */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-20 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#f4e04d_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.2] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
       <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {STATS_DATA.map((stat, i) => (
             <div
               key={i}
-              className="group relative flex flex-col items-center lg:items-start p-8 rounded-[2.5rem] bg-white border-2 border-zinc-50 shadow-2xl shadow-zinc-200/40 hover:scale-105 transition-transform duration-500 hover:border-zinc-100"
+              className="group relative flex flex-col items-center lg:items-start p-8 rounded-[2.5rem] bg-surface border-2 border-primary/5 shadow-xl shadow-primary/5 hover:scale-105 transition-transform duration-500 hover:border-primary/20"
             >
               <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-3xl ${stat.bg} ${stat.color} shadow-inner group-hover:rotate-12 transition-transform`}>
                 <stat.icon size={30} strokeWidth={2.5} />

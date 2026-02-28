@@ -28,14 +28,14 @@ export default function PartnershipTiers({
   const categories = ["Hemat", "Populer", "Serius", "Strategic"];
 
   return (
-    <section id="tiers" className="py-24 bg-surface/50 relative overflow-hidden">
+    <section id="tiers" className="py-24 bg-surface relative overflow-hidden">
       {/* Background Decorative Blob */}
-      <div className="absolute top-1/4 -right-20 w-80 h-80 bg-pink-100 rounded-full blur-[100px] opacity-40"></div>
+      <div className="absolute top-1/4 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] opacity-40"></div>
       <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-sky-100 rounded-full blur-[100px] opacity-40"></div>
 
       <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="mb-16 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1.5 text-[10px] font-black text-amber-600 uppercase tracking-[0.2em] shadow-sm">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-[10px] font-black text-zinc-900 uppercase tracking-[0.2em] shadow-sm">
             Partnership Levels
           </div>
           <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl outfit leading-none mb-4">
@@ -56,8 +56,8 @@ export default function PartnershipTiers({
                 onClick={() => setIsTierTab(cat)}
                 className={`px-6 py-3 rounded-2xl text-xs md:text-sm font-black transition-all shadow-sm border-2 ${
                   isTierTab === cat
-                    ? "bg-zinc-900 border-zinc-900 text-white shadow-xl scale-105"
-                    : "bg-white border-zinc-100 text-zinc-400 hover:border-amber-400 hover:text-amber-500"
+                    ? "bg-primary border-primary text-zinc-900 shadow-xl scale-105"
+                    : "bg-white border-zinc-100 text-zinc-400 hover:border-primary hover:text-zinc-900"
                 }`}
               >
                 Paket {cat}
@@ -73,12 +73,12 @@ export default function PartnershipTiers({
                   key={i}
                   className={`w-[300px] md:w-auto md:min-w-0 shrink-0 snap-center relative group rounded-[3rem] p-8 transition-all hover:-translate-y-3 duration-500 ${
                     tier.recommended
-                      ? "bg-white border-[3px] border-amber-400 shadow-[0_40px_80px_-20px_rgba(245,158,11,0.2)]"
+                      ? "bg-white border-[3px] border-primary shadow-[0_40px_80px_-20px_rgba(244,224,77,0.3)]"
                       : "bg-white border-2 border-zinc-50 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:border-zinc-200"
                   }`}
                 >
                   {tier.recommended && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-pink-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full shadow-xl z-20 flex items-center gap-2">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-zinc-900 text-[10px] font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full shadow-xl z-20 flex items-center gap-2">
                       <Crown size={14} /> Most Popular
                     </div>
                   )}
@@ -92,7 +92,7 @@ export default function PartnershipTiers({
                       />
                       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-zinc-900/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-6 flex items-center gap-2">
-                        <Gift className="text-amber-400" size={18} />
+                        <Gift className="text-primary" size={18} />
                         <span className="text-white text-[10px] font-black uppercase tracking-widest">{tier.tag}</span>
                       </div>
                     </div>
@@ -141,8 +141,8 @@ export default function PartnershipTiers({
                       href={`https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20tertarik%20dengan%20${tier.name}.`}
                       className={`block w-full text-center py-5 rounded-[1.5rem] text-sm font-black transition-all bouncy-hover ${
                         tier.recommended
-                          ? "bg-amber-400 text-white shadow-xl shadow-amber-500/20"
-                          : "bg-zinc-900 text-white shadow-xl shadow-zinc-900/10"
+                          ? "bg-primary text-zinc-900 shadow-xl shadow-primary/20"
+                          : "bg-surface border-2 border-primary/20 text-zinc-900 hover:bg-primary transition-colors"
                       }`}
                     >
                       Start This Journey
@@ -152,7 +152,7 @@ export default function PartnershipTiers({
               ))}
           </div>
 
-          <div className="flex md:hidden justify-center items-center gap-3 text-[10px] text-amber-500 font-black uppercase tracking-widest animate-pulse">
+          <div className="flex md:hidden justify-center items-center gap-3 text-[10px] text-primary font-black uppercase tracking-widest animate-pulse">
             <ArrowRight size={14} className="rotate-180" />
             <span>Slide to see more paths</span>
             <ArrowRight size={14} />

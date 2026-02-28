@@ -16,7 +16,7 @@ export default function Marquee() {
             className="flex items-center gap-16"
           >
             <div className="flex items-center gap-3">
-              <Star size={24} className="text-amber-400" fill="currentColor" />
+              <Star size={24} className="text-primary" fill="currentColor" />
               <span className="text-2xl font-black outfit uppercase tracking-tighter text-zinc-900">
                 700+ HAPPY PARTNERS
               </span>
@@ -28,7 +28,7 @@ export default function Marquee() {
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <Zap size={24} className="text-amber-500" fill="currentColor" />
+              <Zap size={24} className="text-primary" fill="currentColor" />
               <span className="text-2xl font-black outfit uppercase tracking-tighter text-zinc-900">
                 FAST DROP-SHIPPING
               </span>

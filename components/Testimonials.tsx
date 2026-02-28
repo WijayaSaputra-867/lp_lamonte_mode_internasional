@@ -57,7 +57,7 @@ export default function Testimonials() {
               key={i}
               className="group relative flex flex-col items-center lg:items-start p-10 rounded-[3rem] bg-white border-2 border-zinc-50 shadow-2xl shadow-zinc-200/40 hover:-translate-y-4 transition-all duration-500"
             >
-              <div className="absolute top-8 right-10 text-zinc-100 group-hover:text-amber-100 transition-colors">
+              <div className="absolute top-8 right-10 text-zinc-100 group-hover:text-primary/20 transition-colors">
                 <Quote size={60} fill="currentColor" stroke="none" />
               </div>
               
@@ -66,7 +66,7 @@ export default function Testimonials() {
                   <Star
                     key={i}
                     size={20}
-                    className="text-amber-400"
+                    className="text-primary"
                     fill="currentColor"
                   />
                 ))}
@@ -103,8 +103,8 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-20 flex justify-center">
-          <div className="group relative glass-dark rounded-[3.5rem] p-10 md:p-14 max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-10 border-white/50 overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)]">
-            <div className="absolute top-0 right-0 w-1/4 h-full bg-amber-400/5 rotate-12 translate-x-1/2 blur-3xl pointer-events-none"></div>
+          <div className="group relative bg-white rounded-[3.5rem] p-10 md:p-14 max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-10 border-2 border-primary/20 overflow-hidden shadow-[0_50px_100px_-20px_rgba(244,224,77,0.2)]">
+            <div className="absolute top-0 right-0 w-1/4 h-full bg-primary/10 rotate-12 translate-x-1/2 blur-3xl pointer-events-none"></div>
             
             <div className="flex -space-x-5 overflow-hidden relative z-10">
               {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -118,7 +118,7 @@ export default function Testimonials() {
                   />
                 </div>
               ))}
-              <div className="h-16 w-16 flex items-center justify-center rounded-3xl bg-zinc-900 border-4 border-white text-white text-xs font-black shadow-xl">
+              <div className="h-16 w-16 flex items-center justify-center rounded-3xl bg-primary border-4 border-white text-zinc-900 text-xs font-black shadow-xl">
                 +700
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function Testimonials() {
             
             <a
               href="https://wa.me/6281234567890"
-              className="relative z-10 w-full md:w-auto text-center rounded-3xl bg-zinc-900 px-10 py-5 text-sm font-black text-white hover:bg-zinc-800 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-zinc-900/40"
+              className="relative z-10 w-full md:w-auto text-center rounded-3xl bg-primary px-10 py-5 text-sm font-black text-zinc-900 hover:bg-primary-hover hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/20"
             >
               Ready to Win?
             </a>

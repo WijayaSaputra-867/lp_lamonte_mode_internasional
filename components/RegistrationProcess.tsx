@@ -8,8 +8,8 @@ const STEPS = [
     title: "Pilih Paket Kemitraan",
     desc: "Tentukan level bisnis yang sesuai dengan modal dan target profit Anda. Dari paket hemat sampai strategic.",
     icon: ClipboardCheck,
-    color: "bg-amber-400",
-    shadow: "shadow-amber-500/20",
+    color: "bg-primary",
+    shadow: "shadow-primary/20",
   },
   {
     title: "Hubungi Admin via WA",
@@ -38,7 +38,7 @@ export default function RegistrationProcess() {
   return (
     <section id="registration" className="py-24 bg-white relative overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.03] rotate-12 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(#f4e04d_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.05] rotate-12 pointer-events-none"></div>
 
       <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="mb-20 text-center">
@@ -60,8 +60,8 @@ export default function RegistrationProcess() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative z-10">
             {STEPS.map((step, i) => (
               <div key={i} className="group flex flex-row lg:flex-col items-center lg:items-center text-left lg:text-center gap-6 lg:gap-0">
-                <div className={`relative shrink-0 mb-0 lg:mb-8 h-16 w-16 lg:h-24 lg:w-24 flex items-center justify-center rounded-2xl lg:rounded-[2rem] ${step.color} text-white shadow-xl lg:shadow-2xl ${step.shadow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                  <step.icon className="w-8 h-8 lg:w-10 lg:h-10" />
+                <div className={`relative shrink-0 mb-0 lg:mb-8 h-16 w-16 lg:h-24 lg:w-24 flex items-center justify-center rounded-2xl lg:rounded-[2rem] ${step.color} text-zinc-900 shadow-xl lg:shadow-2xl ${step.shadow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <step.icon size={32} className="w-8 h-8 lg:w-10 lg:h-10" />
                   <div className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 h-7 w-7 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg lg:rounded-2xl bg-zinc-900 text-white text-[10px] lg:text-sm font-black shadow-xl">
                     {i + 1}
                   </div>
@@ -87,7 +87,7 @@ export default function RegistrationProcess() {
         </div>
 
         <div className="mt-20 flex flex-col items-center">
-          <div className="bg-zinc-50 rounded-[3rem] p-8 md:p-12 w-full max-w-4xl border-2 border-dashed border-zinc-200 text-center relative overflow-hidden group">
+          <div className="bg-surface rounded-[3rem] p-8 md:p-12 w-full max-w-4xl border-2 border-dashed border-primary/20 text-center relative overflow-hidden group shadow-sm">
             <div className="relative z-10">
               <h4 className="text-2xl font-black text-zinc-900 outfit mb-4 leading-tight">
                 Punya Pertanyaan Sebelum Memulai?
@@ -97,7 +97,7 @@ export default function RegistrationProcess() {
               </p>
               <a
                 href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20peluang%20usaha."
-                className="inline-flex items-center gap-3 rounded-2xl bg-emerald-500 px-10 py-5 text-sm font-black text-white hover:bg-emerald-600 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-emerald-500/20"
+                className="inline-flex items-center gap-3 rounded-2xl bg-primary px-10 py-5 text-sm font-black text-zinc-900 hover:bg-primary-hover hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20"
               >
                 Konsultasi Gratis Sekarang
                 <ArrowRight size={18} />
@@ -105,7 +105,7 @@ export default function RegistrationProcess() {
             </div>
             
             {/* Playful Floating Pattern for Box */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-emerald-100 rounded-full blur-3xl opacity-40 group-hover:scale-150 transition-transform duration-1000"></div>
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl opacity-40 group-hover:scale-150 transition-transform duration-1000"></div>
           </div>
         </div>
       </div>

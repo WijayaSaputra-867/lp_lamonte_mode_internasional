@@ -80,7 +80,7 @@ export default function Catalog({ isMobile }: CatalogProps) {
   return (
     <section id="catalog" className="py-24 bg-white relative">
       {/* Decorative background shape */}
-      <div className="absolute top-0 right-0 w-1/4 h-full bg-pink-50/30 -skew-x-12 transform origin-top-right pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/4 h-full bg-primary/5 -skew-x-12 transform origin-top-right pointer-events-none"></div>
 
       <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -97,7 +97,7 @@ export default function Catalog({ isMobile }: CatalogProps) {
           </div>
           <div className="flex gap-2">
             {["All", "New Born", "Toddler", "Teens"].map((cat) => (
-              <button key={cat} className="px-5 py-2 rounded-full bg-zinc-50 border border-zinc-100 text-sm font-bold text-zinc-500 hover:border-amber-400 hover:text-amber-500 transition-all shadow-sm">
+              <button key={cat} className="px-5 py-2 rounded-full bg-white border border-zinc-100 text-sm font-bold text-zinc-500 hover:border-primary hover:text-zinc-900 transition-all shadow-sm">
                 {cat}
               </button>
             ))}
@@ -124,13 +124,13 @@ export default function Catalog({ isMobile }: CatalogProps) {
                 </button>
                 
                 <div className="absolute top-4 left-4">
-                  <span className="bg-zinc-900 text-white text-[10px] font-black px-3 py-1.5 rounded-xl uppercase tracking-widest shadow-xl">
+                  <span className="bg-primary text-zinc-900 text-[10px] font-black px-3 py-1.5 rounded-xl uppercase tracking-widest shadow-xl">
                     {prod.tag}
                   </span>
                 </div>
                 
                 <div className="absolute inset-x-4 bottom-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                  <button className="w-full py-3 bg-white/90 backdrop-blur-md rounded-2xl text-xs font-black text-zinc-900 shadow-xl flex items-center justify-center gap-2 hover:bg-amber-400 hover:text-white transition-colors">
+                  <button className="w-full py-3 bg-white/90 backdrop-blur-md rounded-2xl text-xs font-black text-zinc-900 shadow-xl flex items-center justify-center gap-2 hover:bg-primary hover:text-zinc-900 transition-colors">
                     <ShoppingBag size={14} /> View Details
                   </button>
                 </div>
@@ -142,18 +142,18 @@ export default function Catalog({ isMobile }: CatalogProps) {
                     {prod.cat}
                   </p>
                   <div className="flex items-center gap-1">
-                    <Star size={12} fill="#F59E0B" stroke="none" />
+                    <Star size={12} fill="#f4e04d" stroke="none" />
                     <span className="text-[10px] font-bold text-zinc-400">{prod.rating}</span>
                   </div>
                 </div>
-                <h3 className="text-sm md:text-lg font-black text-zinc-900 outfit leading-none tracking-tight truncate group-hover:text-amber-500 transition-colors">
+                <h3 className="text-sm md:text-lg font-black text-zinc-900 outfit leading-none tracking-tight truncate group-hover:text-primary transition-colors">
                   {prod.name}
                 </h3>
                 <div className="pt-2 flex items-center justify-between">
                   <span className="text-xl font-black text-zinc-900 outfit">
                     {prod.price}
                   </span>
-                  <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-zinc-50 text-zinc-400 group-hover:bg-pink-500 group-hover:text-white transition-all transform group-hover:rotate-12">
+                  <div className="h-8 w-8 flex items-center justify-center rounded-xl bg-zinc-50 text-zinc-400 group-hover:bg-primary group-hover:text-zinc-900 transition-all transform group-hover:rotate-12">
                     <ShoppingBag size={16} />
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function Catalog({ isMobile }: CatalogProps) {
           <div className="mt-8 flex justify-center md:hidden">
             <a
               href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20lihat%20katalog%20lengkapnya."
-              className="text-xs font-black text-primary hover:underline flex items-center gap-1 uppercase tracking-widest"
+              className="text-xs font-black text-zinc-900 hover:underline flex items-center gap-1 uppercase tracking-widest"
             >
               Explore Full Collection <ArrowRight size={14} />
             </a>
@@ -176,7 +176,7 @@ export default function Catalog({ isMobile }: CatalogProps) {
         <div className="mt-16 text-center">
           <a
             href="https://wa.me/6281234567890"
-            className="inline-flex items-center gap-3 rounded-full border-[3px] border-zinc-900 px-10 py-4 text-sm font-black text-zinc-900 transition-all hover:bg-zinc-900 hover:text-white hover:scale-105 group shadow-2xl shadow-zinc-900/10"
+            className="inline-flex items-center gap-3 rounded-full border-[3px] border-primary px-10 py-4 text-sm font-black text-zinc-900 transition-all hover:bg-primary hover:text-zinc-900 hover:scale-105 group shadow-2xl shadow-primary/10"
           >
             Request Catalog via WhatsApp{" "}
             <ArrowRight
