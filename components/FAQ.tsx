@@ -5,20 +5,20 @@ import { ChevronDown } from "lucide-react";
 
 const FAQ_DATA = [
   {
-    q: "Kualitas Kain & Material?",
-    a: "Kami hanya menggunakan serat alami berkualitas tinggi. Setiap paket kemitraan menyertakan produk dengan standar Kelas A, memastikan kenyamanan si kecil di setiap aktivitas.",
+    q: "Kalau barangnya tidak memuaskan atau ada yang cacat/reject?",
+    a: "Jangan khawatir! Kami memberikan Garansi Retur 100%. Jika ada baju cacat produksi, Anda berhak menukarnya maksimal 3 hari setelah paket sampai. Risiko Anda kami ambil alih.",
   },
   {
-    q: "Kebijakan Retur & Kualitas?",
-    a: "Integritas adalah prioritas kami. Jika terdapat produk cacat, kami menyediakan proses retur yang transparan dan cepat maksimal 3 hari setelah barang diterima.",
+    q: "Saya pemula dan belum pernah jualan, apakah pasti laku?",
+    a: "Semua paket kami dilengkapi fitur pendampingan (Mentoring, Akademi Konten, dll). Ribuan mitra kami awalnya juga pemula. Anda tinggal 'copy-paste' materi jualan dan strategi yang sudah sering terbukti laris.",
   },
   {
-    q: "Proses Pengiriman?",
-    a: "Kami bekerja sama dengan kurir prioritas untuk memastikan pesanan Anda tiba dalam kondisi sempurna dengan biaya yang telah kami negosiasikan secara khusus.",
+    q: "Apakah nanti target pasarnya jelas dan mudah dijual?",
+    a: "Baju anak adalah kebutuhan pokok yang tidak mengenal tren musiman. Selama ada anak-anak, pasar Anda selalu tumbuh. Koleksi kami juga diisi dengan tren terbaru agar Anda jadi trendsetter di kota Anda.",
   },
   {
-    q: "Fleksibilitas Harga?",
-    a: "Kami memberikan standar HET untuk menjaga ekosistem tetap sehat, namun memberikan keleluasaan bagi mitra untuk menyesuaikan dengan biaya operasional lokal masing-masing.",
+    q: "Apakah ada biaya pendaftaran, admin bulanan, atau potong royalti?",
+    a: "TIDAK ADA SAMA SEKALI! 100% uang yang Anda bayar adalah untuk isi dalam Paket (baju, banner, sertifikat, dll). Setelah bajunya laku terjual, 100% margin keuntungannya mutlak milik Anda tanpa bagi hasil.",
   },
 ];
 

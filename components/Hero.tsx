@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { Play } from "lucide-react";
+import { Play, ShieldCheck, Users } from "lucide-react";
 
 interface HeroProps {
   setIsTierTab?: (tab: string) => void;
@@ -43,13 +43,18 @@ export default function Hero({ setIsTierTab }: HeroProps) {
                 className='px-10 py-5 bg-primary text-secondary text-[11px] font-sans font-black tracking-[0.4em] uppercase hover:bg-yellow-300 hover:shadow-2xl transition-all duration-500 shadow-lg rounded-xl'>
                 Lihat Semua Paket
               </a>
-              <div className='text-center'>
-                <span className='text-[12px] text-gray-600 font-sans font-semibold tracking-wide uppercase block mb-2'>
+              <div className='text-center mb-1'>
+                <span className='text-[12px] text-gray-600 font-sans font-semibold tracking-wide uppercase block mb-1'>
                   Paket Mulai dari
                 </span>
                 <span className='text-3xl font-serif font-black text-primary'>
-                  Rp 1 Juta
+                  Rp 650 Ribu
                 </span>
+              </div>
+              <div className='flex items-center justify-center gap-3 text-[10px] font-sans font-bold text-secondary/60 uppercase tracking-widest'>
+                <span className='flex items-center gap-1'><ShieldCheck size={12} className="text-green-500" /> Garansi Retur 100%</span>
+                <span>•</span>
+                <span className='flex items-center gap-1'><Users size={12} className="text-blue-500" /> Dibimbing Sampai Laku</span>
               </div>
             </div>
 

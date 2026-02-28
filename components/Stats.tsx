@@ -3,10 +3,10 @@
 import React from "react";
 
 const STATS_DATA = [
-  { label: "Pertumbuhan Mitra", value: "85%", detail: "Tahun ke Tahun" },
-  { label: "Simpul Aktif", value: "700+", detail: "Seluruh Wilayah" },
-  { label: "Output Bulanan", value: "50k+", detail: "Unit Premium" },
-  { label: "Jangkauan Global", value: "12", detail: "Negara Aktif" },
+  { label: "Balik Modal Cepat", value: "85%", detail: "Mitra di Bulan Pertama" },
+  { label: "Toko & Reseller Aktif", value: "700+", detail: "Berjualan Tiap Hari" },
+  { label: "Produk Laris", value: "50k+", detail: "Potong Terjual Bulanan" },
+  { label: "Potongan Royalti", value: "0%", detail: "Keuntungan 100% Milik Anda" },
 ];
 
 export default function Stats() {

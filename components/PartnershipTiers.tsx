@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck, Award, TrendingUp, CheckCircle } from "lucide-react";
 
 interface Tier {
   category: string;
@@ -43,10 +43,35 @@ export default function PartnershipTiers({
             <br />
             <span className='italic'>Sempurna untuk Bisnis Anda</span>
           </h2>
-          <p className='text-xl text-secondary font-serif max-w-3xl mx-auto mb-6 leading-relaxed'>
+          <p className='text-xl text-secondary font-serif max-w-3xl mx-auto mb-8 leading-relaxed'>
             Mulai dari yang sederhana hingga yang komprehensif — kami punya
             paket yang tepat untuk setiap tahap pertumbuhan bisnis Anda
           </p>
+
+          {/* Social Proof Badges */}
+          <div className='flex flex-wrap justify-center gap-4 mb-12'>
+            <div className='bg-primary/10 text-primary px-4 py-3 rounded-full text-xs font-sans font-bold uppercase tracking-widest flex items-center gap-2 border border-primary/20 shadow-xs'>
+              <Award size={16} /> Pengalaman 13+ Tahun
+            </div>
+            <div className='bg-primary/10 text-primary px-4 py-3 rounded-full text-xs font-sans font-bold uppercase tracking-widest flex items-center gap-2 border border-primary/20 shadow-xs'>
+              <TrendingUp size={16} /> 50.000+ Kirim/Bulan
+            </div>
+            <div className='bg-primary/10 text-primary px-4 py-3 rounded-full text-xs font-sans font-bold uppercase tracking-widest flex items-center gap-2 border border-primary/20 shadow-xs'>
+              ⭐ 700+ Mitra Aktif
+            </div>
+          </div>
+          
+          {/* Guarantee Banner */}
+          <div className='max-w-3xl mx-auto bg-linear-to-r from-yellow-50 via-primary/10 to-yellow-50 border border-primary/30 rounded-2xl p-6 mb-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 shadow-md'>
+            <div className='bg-white p-3 rounded-full shadow-md text-green-500 shrink-0 border border-green-100'>
+              <ShieldCheck size={32} />
+            </div>
+            <div className='text-center md:text-left'>
+              <p className='text-base font-sans font-black text-secondary uppercase tracking-widest mb-1'>GARANSI 100% ANTI RUGI</p>
+              <p className='text-sm font-serif text-secondary/70 italic'>Retur penuh untuk barang tidak lolos Quality Control. Kami tanggung risikonya.</p>
+            </div>
+          </div>
+
           <div className='w-full h-1 bg-linear-to-r from-transparent via-primary to-transparent mb-12'></div>
 
           <div className='max-w-5xl mx-auto bg-linear-to-b from-white to-primary/5 border-3 border-primary/40 p-6 rounded-3xl flex flex-wrap justify-center gap-5 shadow-lg'>
@@ -134,8 +159,7 @@ export default function PartnershipTiers({
                   </div>
                   {tier.perks.map((perk, j) => (
                     <div key={j} className='flex gap-3 group/item'>
-                      <div
-                        className={`${tier.recommended ? "w-1.5 h-6" : "w-1 h-5"} bg-linear-to-b from-primary to-primary/40 rounded-full shrink-0`}></div>
+                      <CheckCircle size={18} className='text-primary shrink-0 mt-0.5' />
                       <span
                         className={`${tier.recommended ? "text-base" : "text-sm"} font-serif italic text-secondary/80`}>
                         {perk}
@@ -147,10 +171,10 @@ export default function PartnershipTiers({
                 <button
                   className={`w-full flex items-center justify-center gap-3 py-6 lg:py-7 px-6 font-sans font-black text-[13px] uppercase tracking-[0.4em] rounded-2xl transition-all duration-500 transform ${
                     tier.recommended
-                      ? "bg-linear-to-r from-primary to-yellow-300 text-secondary hover:shadow-2xl hover:-translate-y-2 ring-4 ring-primary/30"
+                      ? "bg-linear-to-r from-primary to-yellow-300 text-secondary hover:shadow-2xl hover:-translate-y-2 ring-4 ring-primary/30 hover:ring-primary/50"
                       : "border-3 border-secondary/40 text-secondary hover:bg-secondary hover:text-white hover:border-secondary hover:scale-105"
                   }`}>
-                  <span>Pilih Paket Ini</span>
+                  <span>{tier.recommended ? "Klaim Paket Ini" : "Amankan Paket Saya"}</span>
                   <ArrowRight size={20} className='shrink-0' />
                 </button>
               </div>
@@ -163,10 +187,13 @@ export default function PartnershipTiers({
             <h4 className='text-5xl md:text-6xl font-serif font-black mb-6 text-primary'>
               Belum Menemukan Paket yang Tepat?
             </h4>
-            <p className='text-gray-400 text-xl font-sans font-semibold leading-relaxed max-w-2xl'>
+            <p className='text-gray-400 text-xl font-sans font-semibold leading-relaxed max-w-2xl mb-6'>
               Tidak ada paket standar yang sesuai dengan kebutuhan unik Anda?
               Tim ahli kami siap merancang paket kustom eksklusif yang perfect
               untuk visi bisnis Anda.
+            </p>
+            <p className='text-yellow-300 text-xs font-sans font-black uppercase tracking-widest flex items-center gap-2 md:justify-start justify-center bg-white/10 w-fit px-4 py-2 rounded-lg'>
+              <TrendingUp size={16} /> Slot konsultasi eksklusif sisa 5 untuk bulan ini.
             </p>
           </div>
           <a

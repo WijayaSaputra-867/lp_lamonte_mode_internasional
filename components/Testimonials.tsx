@@ -5,18 +5,18 @@ import React from "react";
 const TESTIMONIALS_DATA = [
   {
     name: "Rahmawati",
-    role: "Mitra Bekasi",
-    text: "Menjadi bagian dari komunitas Lamonte bukan hanya tentang menjual produk, tapi belajar tentang integritas dalam bisnis. Dukungan mentoringnya sangat tulus dan membantu saya tumbuh dari nol.",
+    role: "Mitra Paket Hemat",
+    text: "Awalnya cuma berani coba Paket Hemat 650 ribu karena takut gak laku. Eh, ternyata baru posting di WA story 3 hari langsung ludes! Sekarang udah upgrade ke Paket Populer.",
   },
   {
     name: "Surya Pratama",
-    role: "Distributor Surabaya",
-    text: "Kualitas yang konsisten adalah alasan saya bertahan selama 5 tahun. Di Lamonte, kita tidak pernah ditinggalkan sendirian. Setiap tantangan dihadapi bersama sebagai satu keluarga besar.",
+    role: "Mitra Paket Buka Toko",
+    text: "Lamonte ngasih fasilitas gila-gilaan. Ngambil paket Buka Toko udah dapet spanduk, bimbingan karyawan, plus baju-baju yang kualitas jahitan butik banget. Bulan kedua udah buka cabang.",
   },
   {
     name: "Maya Kartika",
-    role: "Pengecer Ulang Bandung",
-    text: "Linimasa Instagram saya menjadi jauh lebih profesional berkat Akademi Konten. Pelanggan saya selalu kagum dengan estetika produk dan kemasan yang kami kirimkan.",
+    role: "Mitra Paket Usaha Campur",
+    text: "Jujur milih paket ini karena ada Akademi Kontennya. Saya gaptek, tapi diajarin jualan di TikTok dan dapet materi mentahan video HD tiap hari. Pelanggan saya ngira ini baju impor mahal.",
   },
 ];
 
