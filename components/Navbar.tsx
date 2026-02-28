@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { ShoppingBag, X, Menu, Heart, User } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { ShoppingBag, X, Menu, Search, User } from "lucide-react";
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -9,98 +9,116 @@ interface NavbarProps {
 }
 
 export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
-      <div className="glass rounded-3xl px-6 py-3 flex items-center justify-between border-white/20 bg-white/80 backdrop-blur-md shadow-lg shadow-primary/5">
-        <div className="flex items-center gap-2 group cursor-pointer">
-          <div className="h-10 w-10 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/20 group-hover:rotate-12 transition-transform">
-            <ShoppingBag className="text-zinc-900" size={22} />
-          </div>
-          <div className="flex flex-col -space-y-1">
-            <span className="text-lg font-black tracking-tighter outfit text-zinc-900">
-              MITRA <span className="text-zinc-900">LAMONTE</span>
-            </span>
-            <span className="text-[10px] font-bold text-zinc-400 tracking-widest uppercase">
-              Kids Fashion Hub
-            </span>
-          </div>
+    <nav 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        isScrolled ? "bg-white/90 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"
+      }`}
+    >
+      <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-secondary hover:opacity-70 transition-opacity"
+        >
+          {isMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+        </button>
+
+        {/* Logo */}
+        <div className="flex flex-col items-center cursor-pointer group">
+          <span className="text-xl md:text-2xl font-serif font-medium tracking-[0.2em] text-secondary uppercase">
+            Lamonte
+          </span>
+          <div className="h-px w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+          <span className="text-[8px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mt-1">
+            Partnership
+          </span>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1 text-sm font-bold text-zinc-500">
+        <div className="hidden md:flex items-center gap-10 text-[10px] font-sans font-black uppercase tracking-[0.2em] text-secondary/60">
           {[
-            { label: "Keunggulan", href: "#features" },
-            { label: "Katalog", href: "#catalog" },
-            { label: "Paket Mitra", href: "#tiers" },
-            { label: "Cara Daftar", href: "#registration" },
-            { label: "FAQ", href: "#faq" },
+            { label: "Our Story", href: "#features" },
+            { label: "Collection", href: "#catalog" },
+            { label: "Philosophy", href: "#why-us" },
+            { label: "Partnership", href: "#tiers" },
           ].map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="px-4 py-2 rounded-xl hover:bg-primary/10 hover:text-zinc-900 transition-all bouncy-hover"
+              className="hover:text-secondary transition-colors relative group py-2"
             >
               {link.label}
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-500 group-hover:w-full"></span>
             </a>
           ))}
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-2 mr-2">
-            <button className="h-10 w-10 flex items-center justify-center rounded-xl bg-zinc-50 text-zinc-400 hover:text-pink-500 hover:bg-pink-50 transition-colors">
-              <Heart size={20} />
-            </button>
-            <button className="h-10 w-10 flex items-center justify-center rounded-xl bg-zinc-50 text-zinc-400 hover:text-sky-500 hover:bg-sky-50 transition-colors">
-              <User size={20} />
-            </button>
-          </div>
-          
+        {/* Icons */}
+        <div className="flex items-center gap-6">
+          <button className="text-secondary hover:text-primary transition-colors">
+            <Search size={20} strokeWidth={1.5} />
+          </button>
+          <button className="text-secondary hover:text-primary transition-colors hidden sm:block">
+            <User size={20} strokeWidth={1.5} />
+          </button>
           <a
             href="https://wa.me/6281234567890"
-            className="hidden lg:inline-block rounded-2xl bg-primary px-6 py-2.5 text-sm font-black text-zinc-900 transition-all hover:bg-primary-hover hover:scale-105 active:scale-95 shadow-xl shadow-primary/20"
+            className="relative h-10 w-10 flex items-center justify-center text-secondary hover:text-primary transition-colors"
           >
-            Gabung Sekarang
+            <ShoppingBag size={20} strokeWidth={1.5} />
+            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[8px] font-black">
+              0
+            </span>
           </a>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-zinc-900 md:hidden hover:bg-primary-hover transition-colors"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
 
       {/* Mobile Nav Overlay */}
       <div
-        className={`absolute top-full left-0 mt-4 w-full glass rounded-[2rem] overflow-hidden transition-all duration-500 ease-out md:hidden ${
-          isMenuOpen ? "opacity-100 translate-y-0 visible scale-100" : "opacity-0 -translate-y-10 invisible scale-95"
+        className={`fixed inset-0 top-[72px] bg-white z-40 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden ${
+          isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
         }`}
       >
-        <div className="flex flex-col p-6 gap-2 bg-white/90 backdrop-blur-xl">
+        <div className="flex flex-col p-12 gap-8 text-center h-full justify-center">
           {[
-            { label: "Keunggulan", href: "#features" },
-            { label: "Katalog", href: "#catalog" },
-            { label: "Paket Mitra", href: "#tiers" },
-            { label: "Cara Daftar", href: "#registration" },
-            { label: "FAQ", href: "#faq" },
-          ].map((link) => (
+            { label: "Our Story", href: "#features" },
+            { label: "Collection", href: "#catalog" },
+            { label: "Philosophy", href: "#why-us" },
+            { label: "Partnership", href: "#tiers" },
+            { label: "Registration", href: "#registration" },
+          ].map((link, i) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg font-black text-zinc-900 border-b border-zinc-50 pb-3 hover:text-primary transition-colors px-2"
+              className="text-3xl font-serif font-light text-secondary lowercase tracking-widest animate-in fade-in slide-in-from-bottom duration-700"
+              style={{ animationDelay: `${i * 100}ms` }}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="https://wa.me/6281234567890"
-            className="mt-4 block w-full text-center rounded-2xl bg-primary py-4 text-lg font-black text-zinc-900 shadow-xl shadow-primary/20"
-          >
-            Daftar Sekarang
-          </a>
+          <div className="mt-12 pt-12 border-t border-zinc-100 flex flex-col items-center gap-6">
+            <span className="text-[10px] font-sans font-black tracking-[0.2em] text-zinc-400 uppercase">
+              Join Our Community
+            </span>
+            <a
+              href="https://wa.me/6281234567890"
+              className="text-lg font-serif italic text-secondary border-b border-primary/40 pb-1"
+            >
+              Contact Specialist
+            </a>
+          </div>
         </div>
       </div>
     </nav>

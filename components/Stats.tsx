@@ -1,40 +1,31 @@
 "use client";
 
 import React from "react";
-import { Award, Package, Users, TrendingUp } from "lucide-react";
 
 const STATS_DATA = [
-  { label: "Year Established", value: "2011+", icon: Award, color: "text-amber-600", bg: "bg-amber-50" },
-  { label: "Products Sold", value: "500K+", icon: Package, color: "text-pink-600", bg: "bg-pink-50" },
-  { label: "Active Partners", value: "700+", icon: Users, color: "text-sky-600", bg: "bg-sky-50" },
-  { label: "Success Rate", value: "99%", icon: TrendingUp, color: "text-emerald-600", bg: "bg-emerald-50" },
+  { label: "Partner Growth", value: "85%", detail: "Year over Year" },
+  { label: "Active Nodes", value: "700+", detail: "Across Regions" },
+  { label: "Monthly Output", value: "50k+", detail: "Premium Units" },
+  { label: "Global Reach", value: "12", detail: "Active Countries" },
 ];
 
 export default function Stats() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Decorative dots pattern */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#f4e04d_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.2] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-
-      <div className="mx-auto max-w-7xl px-6 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
-          {STATS_DATA.map((stat, i) => (
-            <div
-              key={i}
-              className="group relative flex flex-col items-center lg:items-start p-8 rounded-[2.5rem] bg-surface border-2 border-primary/5 shadow-xl shadow-primary/5 hover:scale-105 transition-transform duration-500 hover:border-primary/20"
-            >
-              <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-3xl ${stat.bg} ${stat.color} shadow-inner group-hover:rotate-12 transition-transform`}>
-                <stat.icon size={30} strokeWidth={2.5} />
+    <section className="py-32 bg-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-20">
+          {STATS_DATA.map((item, i) => (
+            <div key={i} className="flex flex-col items-center text-center group">
+              <span className="text-[8px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mb-6 block transition-all group-hover:text-primary">
+                {item.label}
+              </span>
+              <div className="text-5xl md:text-7xl font-serif font-light text-secondary mb-4 leading-none">
+                {item.value}
               </div>
-              <div className="text-3xl font-black text-zinc-900 sm:text-5xl outfit leading-none mb-2">
-                {stat.value}
-              </div>
-              <div className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em] text-center lg:text-left">
-                {stat.label}
-              </div>
-              
-              {/* Card accent line */}
-              <div className={`absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-8 lg:translate-x-0 w-0 h-1.5 rounded-full bg-current ${stat.color} group-hover:w-12 transition-all duration-500`}></div>
+              <div className="h-px w-8 bg-primary mb-4"></div>
+              <span className="text-[10px] font-serif italic text-secondary/40">
+                {item.detail}
+              </span>
             </div>
           ))}
         </div>

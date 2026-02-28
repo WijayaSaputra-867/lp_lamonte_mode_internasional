@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, ArrowRight, Star, Zap, Crown, Gift } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 interface Tier {
   category: string;
@@ -16,7 +16,7 @@ interface Tier {
 
 interface PartnershipTiersProps {
   isTierTab: string;
-  setIsTierTab: (cat: string) => void;
+  setIsTierTab: (tab: string) => void;
   allTiers: Tier[];
 }
 
@@ -26,137 +26,100 @@ export default function PartnershipTiers({
   allTiers,
 }: PartnershipTiersProps) {
   const categories = ["Hemat", "Populer", "Serius", "Strategic"];
+  const filteredTiers = allTiers.filter((tier) => tier.category === isTierTab);
 
   return (
-    <section id="tiers" className="py-24 bg-surface relative overflow-hidden">
-      {/* Background Decorative Blob */}
-      <div className="absolute top-1/4 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] opacity-40"></div>
-      <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-sky-100 rounded-full blur-[100px] opacity-40"></div>
-
-      <div className="mx-auto max-w-7xl px-6 relative z-10">
-        <div className="mb-16 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-[10px] font-black text-zinc-900 uppercase tracking-[0.2em] shadow-sm">
-            Partnership Levels
-          </div>
-          <h2 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl outfit leading-none mb-4">
-            Pick Your <span className="amber-gradient">Success Path</span>
+    <section id="tiers" className="py-32 bg-background">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center mb-20 lg:mb-32">
+          <span className="text-[10px] font-sans font-black tracking-[0.5em] text-zinc-400 uppercase mb-6 block">
+            The Path to Growth
+          </span>
+          <h2 className="text-5xl md:text-8xl font-serif font-light text-secondary leading-tight tracking-tight">
+            Partnership <br /> <span className="italic">Manifesto.</span>
           </h2>
-          <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-medium">
-            Choose the perfect entry point for your business size and target profit.
-            Every plan includes expert mentoring.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-12">
-          {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 px-2">
+          <div className="max-w-2xl mx-auto mt-12 bg-white/50 border border-secondary/5 p-2 flex flex-wrap justify-center gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setIsTierTab(cat)}
-                className={`px-6 py-3 rounded-2xl text-xs md:text-sm font-black transition-all shadow-sm border-2 ${
+                className={`px-8 py-3 text-[10px] font-sans font-black uppercase tracking-[0.2em] transition-all ${
                   isTierTab === cat
-                    ? "bg-primary border-primary text-zinc-900 shadow-xl scale-105"
-                    : "bg-white border-zinc-100 text-zinc-400 hover:border-primary hover:text-zinc-900"
+                    ? "bg-secondary text-white"
+                    : "text-zinc-400 hover:text-secondary hover:bg-surface-muted"
                 }`}
               >
-                Paket {cat}
+                {cat}
               </button>
             ))}
           </div>
+        </div>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 -mx-6 px-6 pt-12 pb-12 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 md:overflow-visible md:pb-0 md:mx-0 md:px-0 md:pt-0 hide-scrollbar">
-            {allTiers
-              .filter((t) => t.category === isTierTab)
-              .map((tier, i) => (
-                <div
-                  key={i}
-                  className={`w-[300px] md:w-auto md:min-w-0 shrink-0 snap-center relative group rounded-[3rem] p-8 transition-all hover:-translate-y-3 duration-500 ${
-                    tier.recommended
-                      ? "bg-white border-[3px] border-primary shadow-[0_40px_80px_-20px_rgba(244,224,77,0.3)]"
-                      : "bg-white border-2 border-zinc-50 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] hover:border-zinc-200"
-                  }`}
-                >
-                  {tier.recommended && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-zinc-900 text-[10px] font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full shadow-xl z-20 flex items-center gap-2">
-                      <Crown size={14} /> Most Popular
-                    </div>
-                  )}
-
-                  <div className="relative mb-8">
-                    <div className="aspect-[16/10] rounded-4xl overflow-hidden shadow-2xl shadow-zinc-200 group-hover:rotate-1 transition-transform duration-500">
-                      <img
-                        src={`https://picsum.photos/600/400?random=${i + 200}`}
-                        alt={tier.name}
-                        className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-zinc-900/60 to-transparent"></div>
-                      <div className="absolute bottom-4 left-6 flex items-center gap-2">
-                        <Gift className="text-primary" size={18} />
-                        <span className="text-white text-[10px] font-black uppercase tracking-widest">{tier.tag}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-2xl font-black text-zinc-900 outfit leading-none mb-2">
-                        {tier.name}
-                      </h3>
-                      <p className="text-[10px] text-zinc-400 font-extrabold uppercase tracking-[0.2em]">
-                        {tier.desc}
-                      </p>
-                    </div>
-
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-black text-zinc-900 outfit tracking-tighter">
-                        Rp {tier.price}
-                      </span>
-                    </div>
-
-                    <p className="text-sm text-zinc-500 font-medium leading-relaxed">
-                      {tier.summary}
-                    </p>
-
-                    <div className="h-px bg-zinc-100 w-full"></div>
-
-                    <div className="space-y-3 py-2">
-                      {tier.perks.map((perk, j) => (
-                        <div
-                          key={j}
-                          className="flex items-center gap-3"
-                        >
-                          <div className="h-5 w-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                            <CheckCircle2
-                              size={12}
-                              className="text-emerald-600"
-                            />
-                          </div>
-                          <span className="text-sm text-zinc-700 font-bold">{perk}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <a
-                      href={`https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20tertarik%20dengan%20${tier.name}.`}
-                      className={`block w-full text-center py-5 rounded-[1.5rem] text-sm font-black transition-all bouncy-hover ${
-                        tier.recommended
-                          ? "bg-primary text-zinc-900 shadow-xl shadow-primary/20"
-                          : "bg-surface border-2 border-primary/20 text-zinc-900 hover:bg-primary transition-colors"
-                      }`}
-                    >
-                      Start This Journey
-                    </a>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+          {filteredTiers.map((tier, i) => (
+            <div
+              key={tier.name}
+              className={`relative flex flex-col p-12 bg-white border border-secondary/5 transition-all duration-700 hover:border-primary ${
+                tier.recommended ? "shadow-[0_40px_100px_-20px_rgba(244,224,77,0.15)] ring-1 ring-primary/20" : ""
+              }`}
+            >
+              {tier.recommended && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-6 py-2 text-[8px] font-sans font-black uppercase tracking-widest text-secondary shadow-lg">
+                  Most Visionary Choice
                 </div>
-              ))}
-          </div>
+              )}
 
-          <div className="flex md:hidden justify-center items-center gap-3 text-[10px] text-primary font-black uppercase tracking-widest animate-pulse">
-            <ArrowRight size={14} className="rotate-180" />
-            <span>Slide to see more paths</span>
-            <ArrowRight size={14} />
-          </div>
+              <div className="mb-12">
+                <span className="text-[10px] font-sans font-black tracking-widest text-zinc-300 uppercase block mb-4">
+                  {tier.tag}
+                </span>
+                <h3 className="text-3xl font-serif font-light text-secondary mb-4">
+                  {tier.name}
+                </h3>
+                <div className="flex items-baseline gap-2 text-secondary">
+                  <span className="text-sm font-serif italic">IDR</span>
+                  <span className="text-5xl font-serif font-light">{tier.price}</span>
+                </div>
+                <p className="mt-6 text-sm font-serif italic text-secondary/60 leading-relaxed">
+                   {tier.summary}
+                </p>
+              </div>
+
+              <div className="grow space-y-4 mb-12">
+                <div className="text-[8px] font-sans font-black tracking-[0.3em] text-zinc-400 uppercase border-b border-secondary/5 pb-2 mb-4">
+                   What is Included
+                </div>
+                {tier.perks.map((perk, j) => (
+                  <div key={j} className="flex gap-4 group/item">
+                    <div className="h-5 w-px bg-primary group-hover/item:h-full transition-all duration-500"></div>
+                    <span className="text-sm font-serif italic text-secondary/70">{perk}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button className="w-full flex items-center justify-between group">
+                 <span className="text-[10px] font-sans font-black tracking-[0.3em] text-secondary uppercase">
+                    Begin Journey
+                 </span>
+                 <div className="h-12 w-12 flex items-center justify-center border border-secondary/20 rounded-full group-hover:bg-primary group-hover:border-primary transition-all duration-500">
+                    <ArrowRight size={16} />
+                 </div>
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-32 max-w-4xl mx-auto p-12 bg-secondary text-white flex flex-col md:flex-row items-center justify-between gap-12">
+           <div className="text-center md:text-left">
+              <h4 className="text-2xl font-serif font-light italic mb-2">Belum menemukan yang sesuai?</h4>
+              <p className="text-zinc-400 text-sm font-serif italic">Diskusikan visi bisnis Anda secara personal dengan tim ahli kami.</p>
+           </div>
+           <a
+              href="https://wa.me/6281234567890"
+              className="px-12 py-5 bg-primary text-secondary text-[10px] font-sans font-black uppercase tracking-[0.3em] hover:bg-white transition-colors"
+           >
+              Personal Consultation
+           </a>
         </div>
       </div>
     </section>

@@ -3,20 +3,23 @@
 @theme {
   --color-primary: #f4e04d;
   --color-primary-hover: #e5d13d;
-  --color-accent: #fdf081;
-  --color-accent-pink: #f472b6;
-  --color-accent-sky: #38bdf8;
-  --color-accent-mint: #34d399;
-  --color-background: #ffffff;
-  --color-surface: #fffdf5;
-  --color-surface-muted: #fffbeb;
+  --color-secondary: #2d2a26;
+  --color-background: #fdfaf5;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f7f3ed;
   
-  --font-sans: var(--font-inter), var(--font-outfit), ui-sans-serif, system-ui;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
-  --radius-3xl: 2rem;
-  --radius-4xl: 3rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 1rem;
+  --radius-4xl: 1.5rem;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 html {
