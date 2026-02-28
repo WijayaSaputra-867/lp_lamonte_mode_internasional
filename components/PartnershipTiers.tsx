@@ -65,7 +65,7 @@ export default function PartnershipTiers({
               .map((tier, i) => (
                 <div
                   key={i}
-                  className={`min-w-[75vw] sm:min-w-[300px] md:min-w-0 shrink-0 snap-center relative group rounded-3xl p-5 md:p-6 transition-all hover:-translate-y-2 ${
+                  className={`w-[280px] md:w-auto md:min-w-0 shrink-0 snap-center relative group rounded-3xl p-5 md:p-6 transition-all hover:-translate-y-2 ${
                     tier.recommended
                       ? "bg-white border-2 border-primary shadow-2xl shadow-amber-500/10"
                       : "bg-white border border-zinc-200 shadow-sm hover:shadow-xl"
