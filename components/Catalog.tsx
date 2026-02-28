@@ -14,19 +14,19 @@ const CATALOG_ITEMS = [
     title: "Busana Main Kasual",
     category: "Lokal Premium",
     image:
-      "https://images.unsplash.com/photo-1519234164452-45da053d537a?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Set Esensial",
     category: "Pilihan Impor",
     image:
-      "https://images.unsplash.com/photo-1522771935876-249711cd39fd?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Gaun Andalan",
     category: "Seri Andalan",
     image:
-      "https://images.unsplash.com/photo-1544122159-39c8a8856988?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Dasar Nyaman",
@@ -37,6 +37,9 @@ const CATALOG_ITEMS = [
 ];
 
 export default function Catalog({ isMobile }: CatalogProps) {
+  const fallbackImage =
+    "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=800";
+
   return (
     <section id='catalog' className='py-32 bg-white'>
       <div className='mx-auto max-w-7xl px-6'>
@@ -62,6 +65,12 @@ export default function Catalog({ isMobile }: CatalogProps) {
                 <img
                   src={item.image}
                   alt={item.title}
+                  onError={(event) => {
+                    const imageElement = event.currentTarget;
+                    if (imageElement.src !== fallbackImage) {
+                      imageElement.src = fallbackImage;
+                    }
+                  }}
                   className='w-full h-full object-cover grayscale-[0.2] transition-all duration-[2s] group-hover:grayscale-0 group-hover:scale-110'
                 />
                 <div className='absolute inset-0 border border-secondary/5 group-hover:border-primary/40 transition-colors duration-700'></div>
