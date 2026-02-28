@@ -76,7 +76,7 @@ export default function Catalog({ isMobile }: CatalogProps) {
 
         <div className="mt-24 border-t border-secondary/10 pt-16 flex flex-col items-center">
            <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/628111189921"
               className="text-[10px] font-sans font-black uppercase tracking-[0.4em] text-secondary hover:text-primary transition-colors border-b border-primary/20 hover:border-primary pb-2"
            >
               Download Catalogue 2026

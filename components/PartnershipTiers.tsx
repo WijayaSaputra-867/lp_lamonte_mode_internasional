@@ -115,7 +115,7 @@ export default function PartnershipTiers({
               <p className="text-zinc-400 text-sm font-serif italic">Diskusikan visi bisnis Anda secara personal dengan tim ahli kami.</p>
            </div>
            <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/628111189921"
               className="px-12 py-5 bg-primary text-secondary text-[10px] font-sans font-black uppercase tracking-[0.3em] hover:bg-white transition-colors"
            >
               Personal Consultation

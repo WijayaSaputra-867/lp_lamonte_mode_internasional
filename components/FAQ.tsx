@@ -37,7 +37,7 @@ export default function FAQ() {
             <p className="text-lg font-serif italic text-secondary/60 leading-relaxed max-w-sm mb-12">
               Jawaban untuk pertanyaan yang paling sering diajukan untuk membantu kelancaran operasional bisnis Anda.
             </p>
-            <a href="https://wa.me/6281234567890" className="text-[10px] font-sans font-black uppercase tracking-[0.4em] text-primary border-b border-primary/20 pb-2">
+            <a href="https://wa.me/628111189921" className="text-[10px] font-sans font-black uppercase tracking-[0.4em] text-primary border-b border-primary/20 pb-2">
                Ask Personal Questions
             </a>
           </div>
