@@ -24,36 +24,44 @@ const FAQ_DATA = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-32 bg-background border-t border-secondary/5">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+    <section
+      id='faq'
+      className='py-32 bg-background border-t border-secondary/5'>
+      <div className='mx-auto max-w-7xl px-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-24'>
           <div>
-            <span className="text-[10px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mb-6 block">
-              Inquiries
+            <span className='text-[10px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mb-6 block'>
+              Pertanyaan
             </span>
-            <h2 className="text-4xl md:text-7xl font-serif font-light text-secondary leading-tight mb-8">
-              Fine <span className="italic">Details.</span>
+            <h2 className='text-4xl md:text-7xl font-serif font-light text-secondary leading-tight mb-8'>
+              Detail <span className='italic'>Penting.</span>
             </h2>
-            <p className="text-lg font-serif italic text-secondary/60 leading-relaxed max-w-sm mb-12">
-              Jawaban untuk pertanyaan yang paling sering diajukan untuk membantu kelancaran operasional bisnis Anda.
+            <p className='text-lg font-serif italic text-secondary/60 leading-relaxed max-w-sm mb-12'>
+              Jawaban untuk pertanyaan yang paling sering diajukan untuk
+              membantu kelancaran operasional bisnis Anda.
             </p>
-            <a href="https://wa.me/628111189921" className="text-[10px] font-sans font-black uppercase tracking-[0.4em] text-primary border-b border-primary/20 pb-2">
-               Ask Personal Questions
+            <a
+              href='https://wa.me/628111189921'
+              className='text-[10px] font-sans font-black uppercase tracking-[0.4em] text-primary border-b border-primary/20 pb-2'>
+              Ajukan Pertanyaan Personal
             </a>
           </div>
 
-          <div className="divide-y divide-secondary/10">
+          <div className='divide-y divide-secondary/10'>
             {FAQ_DATA.map((faq, i) => (
-              <details
-                key={i}
-                className="group py-8 cursor-pointer"
-              >
-                <summary className="flex items-center justify-between gap-6 list-none [&::-webkit-details-marker]:hidden">
-                  <h3 className="text-xl font-serif font-light text-secondary">{faq.q}</h3>
-                  <ChevronDown size={20} className="text-zinc-300 transition-transform duration-500 group-open:rotate-180" strokeWidth={1.5} />
+              <details key={i} className='group py-8 cursor-pointer'>
+                <summary className='flex items-center justify-between gap-6 list-none [&::-webkit-details-marker]:hidden'>
+                  <h3 className='text-xl font-serif font-light text-secondary'>
+                    {faq.q}
+                  </h3>
+                  <ChevronDown
+                    size={20}
+                    className='text-zinc-300 transition-transform duration-500 group-open:rotate-180'
+                    strokeWidth={1.5}
+                  />
                 </summary>
-                <div className="mt-6 max-w-md">
-                  <p className="text-base font-serif italic text-secondary/60 leading-relaxed">
+                <div className='mt-6 max-w-md'>
+                  <p className='text-base font-serif italic text-secondary/60 leading-relaxed'>
                     {faq.a}
                   </p>
                 </div>
