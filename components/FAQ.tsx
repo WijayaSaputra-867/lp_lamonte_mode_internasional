@@ -5,24 +5,28 @@ import { Plus, Minus, MessageCircle } from "lucide-react";
 
 const FAQ_DATA = [
   {
-    q: "How do I register as a partner?",
-    a: "It's easy! Just click any 'Register Now' button or contact our admin via WhatsApp to get the registration form and a detailed starter guide.",
+    q: "Bagaimana cara menentukan ukuran baju untuk anak?",
+    a: "Setiap paket kami menyertakan panduan Size Chart standar internasional (dalam cm). Selain itu, kami memberikan tips cara edukasi pelanggan untuk mengukur lingkar dada dan panjang badan agar tidak salah pilih ukuran.",
   },
   {
-    q: "Are there any hidden registration fees?",
-    a: "None at all. The investment amount depends on the partnership tier you choose. We offer options starting from very affordable startup packages.",
+    q: "Apakah produk Lamonte bisa ditukar jika ada yang reject?",
+    a: "Tentu. Kami menjamin kualitas produk kami. Jika terdapat produk reject (sobek/rusak dari pabrik), Anda dapat melakukan klaim retur maksimal 3 hari setelah barang diterima dengan melampirkan video unboxing.",
   },
   {
-    q: "Do I need to manage my own inventory?",
-    a: "Not necessarily. If you choose our Dropshipper package, we handle all the storage, packing, and shipping directly to your customers.",
+    q: "Berapa lama estimasi pengiriman pesanan?",
+    a: "Pesanan diproses dalam 1-2 hari kerja. Lamonte bekerja sama dengan berbagai ekspedisi (JNE, J&T, Sicepat, Indah Cargo) untuk memastikan Anda mendapatkan ongkir termurah ke seluruh pelosok Indonesia.",
   },
   {
-    q: "What kind of support will I receive?",
-    a: "Partners get full access to our Marketing Kit (pro photos/videos), weekly mentoring webinars, a dedicated WhatsApp support group, and a real-time inventory dashboard.",
+    q: "Apakah saya bebas menentukan harga jual sendiri?",
+    a: "Kami menyediakan Harga Eceran Tertinggi (HET) dan Harga Jual Minimum sebagai rekomendasi agar persaingan antar mitra tetap sehat. Namun, Anda tetap memiliki fleksibilitas untuk menyesuaikan harga sesuai biaya operasional lokal.",
   },
   {
-    q: "How often are new designs released?",
-    a: "We drop fresh kids fashion collections every month, ensuring your store is always aligned with the latest market trends and high-demand styles.",
+    q: "Apa perbedaan koleksi Import dan Lokal di Lamonte?",
+    a: "Koleksi Import kami fokus pada tren fashion terkini (Korean/US style) dengan bahan pilihan. Sementara koleksi Lokal diproduksi di pabrik kami sendiri dengan fokus pada bahan katun adem yang sangat cocok untuk iklim Indonesia.",
+  },
+  {
+    q: "Apakah ada biaya pendaftaran atau iuran bulanan?",
+    a: "Tidak ada biaya pendaftaran (Registration Fee) maupun iuran bulanan. Investasi awal Anda sepenuhnya ditukarkan dengan stok produk fisik sesuai paket yang Anda pilih dan akses penuh ke ekosistem dukungan kami.",
   },
 ];
 

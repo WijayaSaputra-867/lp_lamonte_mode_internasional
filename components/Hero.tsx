@@ -25,8 +25,24 @@ export default function Hero() {
             </h1>
             
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-zinc-500 sm:text-xl font-medium animate-in fade-in slide-in-from-bottom duration-700 delay-200">
-              Transform your passion for kids fashion into a thriving enterprise. Join <span className="text-zinc-900 font-bold underline decoration-primary decoration-4">700+ successful partners</span> and earn up to <span className="text-pink-500 font-black">Rp 80 Juta/Bulan</span>.
+              Bangun bisnis fashion anak yang menguntungkan dengan model bisnis yang sudah teruji. Kami menyediakan <span className="text-zinc-900 font-bold underline decoration-primary decoration-4">stok produk import & lokal premium</span>, sistem dropship otomatis, hingga mentoring eksklusif untuk membantu Anda meraih profit maksimal.
             </p>
+            
+            {/* Business Highlights Grid */}
+            <div className="mt-10 grid grid-cols-2 gap-4 w-full animate-in fade-in slide-in-from-bottom duration-700 delay-250">
+              {[
+                { label: "Margin Keuntungan", value: "30-50%", detail: "Per Produk" },
+                { label: "Koleksi Produk", value: "5000+", detail: "SKU Aktif" },
+                { label: "Pengiriman", value: "Everyday", detail: "Seluruh Indonesia" },
+                { label: "Update Model", value: "Weekly", detail: "Tren Terbaru" },
+              ].map((item, i) => (
+                <div key={i} className="bg-white/50 border border-primary/10 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
+                  <div className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-1">{item.label}</div>
+                  <div className="text-xl font-black text-zinc-900 outfit">{item.value}</div>
+                  <div className="text-[10px] font-bold text-primary italic">{item.detail}</div>
+                </div>
+              ))}
+            </div>
             
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 animate-in fade-in slide-in-from-bottom duration-700 delay-300">
               <a
