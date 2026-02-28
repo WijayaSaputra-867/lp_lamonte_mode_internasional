@@ -32,6 +32,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
             { label: "Keunggulan", href: "#features" },
             { label: "Katalog", href: "#catalog" },
             { label: "Paket Mitra", href: "#tiers" },
+            { label: "Cara Daftar", href: "#registration" },
             { label: "FAQ", href: "#faq" },
           ].map((link) => (
             <a
@@ -82,6 +83,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
             { label: "Keunggulan", href: "#features" },
             { label: "Katalog", href: "#catalog" },
             { label: "Paket Mitra", href: "#tiers" },
+            { label: "Cara Daftar", href: "#registration" },
             { label: "FAQ", href: "#faq" },
           ].map((link) => (
             <a

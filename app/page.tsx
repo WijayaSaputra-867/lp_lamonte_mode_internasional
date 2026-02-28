@@ -21,6 +21,7 @@ import PartnershipTiers from "@/components/PartnershipTiers";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import RegistrationProcess from "@/components/RegistrationProcess";
 import Marquee from "@/components/Marquee";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -315,6 +316,7 @@ export default function Home() {
         setIsTierTab={setIsTierTab}
         allTiers={allTiers}
       />
+      <RegistrationProcess />
       <Stats />
       <Testimonials />
       <FAQ />
