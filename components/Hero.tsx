@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -28,20 +28,17 @@ export default function Hero() {
             Di Lamonte, kami percaya bahwa sukses sejati dibangun di atas kepercayaan dan kualitas tanpa kompromi. Temukan kemitraan yang memberdayakan Anda untuk tumbuh lebih dari sekadar angka.
           </p>
           
-          <div className="mt-16 flex flex-col sm:flex-row items-center gap-12 animate-in fade-in slide-in-from-bottom duration-1000 delay-600">
+          <div className="mt-16 flex flex-col sm:flex-row items-center gap-8 sm:gap-12 animate-in fade-in slide-in-from-bottom duration-1000 delay-600">
             <a
               href="#tiers"
-              className="group relative flex flex-col items-center"
+              className="px-8 py-4 border border-secondary/20 text-[10px] font-sans font-black tracking-[0.3em] text-secondary uppercase hover:bg-secondary hover:text-white transition-all duration-500"
             >
-              <span className="text-[10px] font-sans font-black tracking-[0.3em] text-secondary uppercase mb-4 group-hover:text-primary transition-colors">
-                Explore Tiers
-              </span>
-              <div className="h-[60px] w-px bg-secondary group-hover:h-[80px] group-hover:bg-primary transition-all duration-700"></div>
+              Explore Tiers
             </a>
 
-            <a href="https://www.youtube.com/watch?v=i8ol6RhnD60&list=PLS-ocOMZnLn77hvXu6rdq4KeFHg-ul9ES" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 group">
-              <div className="h-16 w-16 rounded-full border border-secondary/20 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-500">
-                <Play size={20} fill="currentColor" strokeWidth={0} />
+            <a href="https://www.youtube.com/watch?v=i8ol6RhnD60&list=PLS-ocOMZnLn77hvXu6rdq4KeFHg-ul9ES" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <div className="h-14 w-14 rounded-full border border-secondary/20 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+                <Play size={18} fill="currentColor" strokeWidth={0} />
               </div>
               <div className="text-left">
                 <span className="block text-[10px] font-sans font-black tracking-[0.2em] text-zinc-400 uppercase mb-1">Our Philosophy</span>
@@ -62,10 +59,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-background/20"></div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30">
-        <span className="text-[8px] font-sans font-black tracking-[0.4em] text-secondary uppercase rotate-90 mb-4 whitespace-nowrap">Scroll</span>
-        <div className="h-12 w-px bg-secondary"></div>
+      {/* Scroll indicator - hidden on mobile */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-30">
+        <span className="text-[8px] font-sans font-black tracking-[0.4em] text-secondary uppercase">Scroll</span>
+        <div className="h-10 w-px bg-secondary"></div>
       </div>
     </header>
   );

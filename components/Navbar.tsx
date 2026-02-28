@@ -86,10 +86,16 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
 
       {/* Mobile Nav Overlay */}
       <div
-        className={`fixed inset-0 top-[72px] bg-white z-40 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden ${
+        className={`fixed inset-0 bg-white z-[60] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden ${
           isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
         }`}
       >
+        {/* Close button inside overlay */}
+        <div className="absolute top-6 left-6">
+          <button onClick={() => setIsMenuOpen(false)} className="text-secondary hover:opacity-70 transition-opacity">
+            <X size={24} strokeWidth={1.5} />
+          </button>
+        </div>
         <div className="flex flex-col p-12 gap-8 text-center h-full justify-center">
           {[
             { label: "Our Story", href: "#features" },
