@@ -6,7 +6,7 @@ const TESTIMONIALS_DATA = [
   {
     name: "Rahmawati",
     role: "Mitra Bekasi",
-    text: "Menjadi bagian dari komunitas Lamonte bukan hanya tentang menjual produk, tapi belajar tentang integritas dalam bisnis. Support mentoringnya sangat tulus dan membantu saya tumbuh dari nol.",
+    text: "Menjadi bagian dari komunitas Lamonte bukan hanya tentang menjual produk, tapi belajar tentang integritas dalam bisnis. Dukungan mentoringnya sangat tulus dan membantu saya tumbuh dari nol.",
   },
   {
     name: "Surya Pratama",
@@ -15,8 +15,8 @@ const TESTIMONIALS_DATA = [
   },
   {
     name: "Maya Kartika",
-    role: "Reseller Bandung",
-    text: "Feed Instagram saya menjadi jauh lebih profesional berkat Content Academy. Pelanggan saya selalu kagum dengan estetika produk dan kemasan yang kami kirimkan.",
+    role: "Pengecer Ulang Bandung",
+    text: "Linimasa Instagram saya menjadi jauh lebih profesional berkat Akademi Konten. Pelanggan saya selalu kagum dengan estetika produk dan kemasan yang kami kirimkan.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Testimonials() {
               sesama.&quot;
             </p>
             <span className='text-[10px] font-sans font-black tracking-widest text-secondary uppercase'>
-              The Lamonte Creed
+              Ikrar Lamonte
             </span>
           </div>
         </div>

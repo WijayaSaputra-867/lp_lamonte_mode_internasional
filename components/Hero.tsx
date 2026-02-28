@@ -62,7 +62,7 @@ export default function Hero() {
       <div className='absolute right-0 bottom-0 w-full lg:w-1/3 h-1/2 lg:h-[70%] hidden lg:block overflow-hidden animate-in fade-in slide-in-from-right duration-[1.5s]'>
         <img
           src='https://images.unsplash.com/photo-1543332164-6e82f3557e4e?auto=format&fit=crop&q=80&w=1200'
-          alt='Kids Fashion Craft'
+          alt='Kerajinan Busana Anak'
           className='w-full h-full object-cover transform scale-110 hover:scale-100 transition-transform duration-[2s]'
         />
         <div className='absolute inset-0 bg-background/20'></div>

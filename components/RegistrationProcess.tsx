@@ -4,7 +4,7 @@ import React from "react";
 
 const STEPS = [
   {
-    title: "Discovery Call",
+    title: "Panggilan Awal",
     desc: "Hubungi spesialis kami melalui WhatsApp untuk mendiskusikan visi dan kebutuhan bisnis Anda secara personal.",
   },
   {
@@ -12,11 +12,11 @@ const STEPS = [
     desc: "Pilih paket kemitraan yang paling sesuai dengan target pertumbuhan Anda. Kami akan membantu proses verifikasi.",
   },
   {
-    title: "Onboarding",
+    title: "Orientasi Awal",
     desc: "Terima paket fisik dan akses digital ke seluruh ekosistem Lamonte. Sesi mentoring pertama dimulai di sini.",
   },
   {
-    title: "Legacy Built",
+    title: "Warisan Terbangun",
     desc: "Mulai perjalanan Anda membangun bisnis yang tidak hanya menguntungkan, tapi juga membanggakan.",
   },
 ];

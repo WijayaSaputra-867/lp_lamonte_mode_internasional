@@ -14,7 +14,7 @@ export default function Footer() {
                 Lamonte
               </span>
               <span className='text-[8px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mt-1'>
-                Partnership
+                Kemitraan
               </span>
             </div>
             <p className='max-w-md text-base font-serif italic text-secondary/60 leading-relaxed mb-10'>
@@ -94,7 +94,7 @@ export default function Footer() {
 
         <div className='flex flex-col md:flex-row justify-between items-center gap-8 border-t border-secondary/5 pt-12'>
           <div className='text-[8px] font-sans font-black text-zinc-400 uppercase tracking-[0.4em]'>
-            &copy; 2026 PT Lamonte Mode Internasional. All Rights Reserved.
+            &copy; 2026 PT Lamonte Mode Internasional. Seluruh Hak Dilindungi.
           </div>
           <div className='flex gap-10 text-[8px] font-sans font-black uppercase tracking-[0.4em] text-zinc-400'>
             <a href='#' className='hover:text-secondary transition-colors'>

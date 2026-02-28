@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React from "react";
@@ -51,7 +52,7 @@ export default function Features({
               className={`group flex flex-col ${feature.isLarge ? "lg:col-span-2 lg:flex-row lg:items-center lg:gap-12" : ""}`}>
               <div
                 className={`mb-10 lg:mb-0 shrink-0 ${feature.isLarge ? "lg:w-1/2" : "w-full"}`}>
-                <div className='relative aspect-square overflow-hidden bg-white grayscale-[0.8] group-hover:grayscale-0 transition-all duration-[1s]'>
+                <div className='relative aspect-square overflow-hidden bg-white grayscale-[0.8] group-hover:grayscale-0 transition-all duration-1000'>
                   <div className='absolute inset-x-8 inset-y-8 border border-secondary/5 flex items-center justify-center p-12 text-secondary/10 group-hover:text-primary/20 transition-colors'>
                     <feature.icon size={120} strokeWidth={0.5} />
                   </div>

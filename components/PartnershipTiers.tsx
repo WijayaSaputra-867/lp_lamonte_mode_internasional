@@ -25,7 +25,7 @@ export default function PartnershipTiers({
   setIsTierTab,
   allTiers,
 }: PartnershipTiersProps) {
-  const categories = ["Hemat", "Populer", "Serius", "Strategic"];
+  const categories = ["Hemat", "Populer", "Serius", "Strategis"];
   const filteredTiers = allTiers.filter((tier) => tier.category === isTierTab);
 
   return (
@@ -77,7 +77,7 @@ export default function PartnershipTiers({
                   {tier.name}
                 </h3>
                 <div className='flex items-baseline gap-2 text-secondary'>
-                  <span className='text-sm font-serif italic'>IDR</span>
+                  <span className='text-sm font-serif italic'>Rp</span>
                   <span className='text-5xl font-serif font-light'>
                     {tier.price}
                   </span>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -9,26 +11,26 @@ interface CatalogProps {
 
 const CATALOG_ITEMS = [
   {
-    title: "Casual Play Wear",
+    title: "Busana Main Kasual",
     category: "Lokal Premium",
     image:
       "https://images.unsplash.com/photo-1519234164452-45da053d537a?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Essential Sets",
-    category: "Import Choice",
+    title: "Set Esensial",
+    category: "Pilihan Impor",
     image:
       "https://images.unsplash.com/photo-1522771935876-249711cd39fd?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Signature Dresses",
-    category: "Signature Series",
+    title: "Gaun Andalan",
+    category: "Seri Andalan",
     image:
       "https://images.unsplash.com/photo-1544122159-39c8a8856988?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Comfort Basics",
-    category: "Everyday Wear",
+    title: "Dasar Nyaman",
+    category: "Busana Harian",
     image:
       "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80&w=800",
   },
@@ -56,7 +58,7 @@ export default function Catalog({ isMobile }: CatalogProps) {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16'>
           {CATALOG_ITEMS.map((item, i) => (
             <div key={i} className='group cursor-pointer'>
-              <div className='relative aspect-[3/4] overflow-hidden bg-surface-muted mb-6'>
+              <div className='relative aspect-3/4 overflow-hidden bg-surface-muted mb-6'>
                 <img
                   src={item.image}
                   alt={item.title}

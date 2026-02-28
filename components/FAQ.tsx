@@ -6,11 +6,11 @@ import { ChevronDown } from "lucide-react";
 const FAQ_DATA = [
   {
     q: "Kualitas Kain & Material?",
-    a: "Kami hanya menggunakan serat alami berkualitas tinggi. Setiap paket kemitraan menyertakan produk dengan standar Grade A, memastikan kenyamanan si kecil di setiap aktivitas.",
+    a: "Kami hanya menggunakan serat alami berkualitas tinggi. Setiap paket kemitraan menyertakan produk dengan standar Kelas A, memastikan kenyamanan si kecil di setiap aktivitas.",
   },
   {
     q: "Kebijakan Retur & Kualitas?",
-    a: "Integritas adalah prioritas kami. Jika terdapat produk reject, kami menyediakan proses retur yang transparan dan cepat maksimal 3 hari setelah barang diterima.",
+    a: "Integritas adalah prioritas kami. Jika terdapat produk cacat, kami menyediakan proses retur yang transparan dan cepat maksimal 3 hari setelah barang diterima.",
   },
   {
     q: "Proses Pengiriman?",

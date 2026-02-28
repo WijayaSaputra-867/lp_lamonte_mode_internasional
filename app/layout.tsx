@@ -20,8 +20,15 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: "Mitra Lamonte | Peluang Bisnis Fashion Anak Premium",
-  description: "Bergabunglah menjadi Mitra Lamonte. Raih keuntungan Rp 15-80 Juta/bulan dengan bisnis baju anak berkualitas. Tanpa stock, sistem otomatis, dan bimbingan eksklusif.",
-  keywords: ["bisnis baju anak", "reseller baju anak", "dropship fashion anak", "mitra lamonte", "peluang usaha fashion"],
+  description:
+    "Bergabunglah menjadi Mitra Lamonte. Raih keuntungan Rp 15-80 Juta/bulan dengan bisnis baju anak berkualitas. Tanpa stok, sistem otomatis, dan bimbingan eksklusif.",
+  keywords: [
+    "bisnis baju anak",
+    "penjual ulang baju anak",
+    "kirim langsung busana anak",
+    "mitra lamonte",
+    "peluang usaha busana",
+  ],
 };
 
 export default function RootLayout({
@@ -30,8 +37,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
-      <body className={`${inter.variable} ${outfit.variable} ${cormorant.variable} font-sans antialiased`}>
+    <html lang='id'>
+      <body
+        className={`${inter.variable} ${outfit.variable} ${cormorant.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

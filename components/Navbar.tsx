@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -57,7 +58,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
             </span>
             <div className='h-px w-0 group-hover:w-full bg-primary transition-all duration-500'></div>
             <span className='text-[8px] font-sans font-black tracking-[0.4em] text-zinc-400 uppercase mt-1'>
-              Partnership
+              Kemitraan
             </span>
           </a>
 
