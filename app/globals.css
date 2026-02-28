@@ -4,22 +4,31 @@
   --color-primary: #f59e0b;
   --color-primary-hover: #d97706;
   --color-accent: #fbbf24;
+  --color-accent-pink: #f472b6;
+  --color-accent-sky: #38bdf8;
+  --color-accent-mint: #34d399;
   --color-background: #ffffff;
-  --color-surface: #fafafa;
-  --color-surface-muted: #f4f4f5;
+  --color-surface: #fff7ed;
+  --color-surface-muted: #fef2f2;
   
   --font-sans: var(--font-inter), var(--font-outfit), ui-sans-serif, system-ui;
   
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-4xl: 3rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer base {
   body {
     @apply bg-background text-zinc-900 antialiased selection:bg-primary/20 selection:text-primary min-h-screen font-sans;
     background-image: 
-      radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.03) 0px, transparent 40%),
-      radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.03) 0px, transparent 40%);
+      radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.05) 0px, transparent 40%),
+      radial-gradient(at 100% 100%, rgba(244, 114, 182, 0.05) 0px, transparent 40%);
   }
 }
 
@@ -29,22 +38,38 @@
   }
   
   .glass-dark {
-    @apply border border-zinc-100 bg-white/80 backdrop-blur-xl shadow-lg shadow-zinc-200/50;
+    @apply border border-white/40 bg-white/60 backdrop-blur-xl shadow-2xl shadow-amber-500/5;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-amber-600 via-pink-500 to-sky-500 bg-clip-text text-transparent;
   }
 
   .amber-gradient {
     @apply bg-gradient-to-tr from-amber-600 to-amber-400 bg-clip-text text-transparent;
   }
-  
-  .glow {
-    @apply shadow-[0_0_20px_rgba(245,158,11,0.15)];
+
+  .pink-gradient {
+    @apply bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  .sky-gradient {
+    @apply bg-gradient-to-tr from-sky-600 to-sky-400 bg-clip-text text-transparent;
   }
   
+  .glow {
+    @apply shadow-[0_0_30px_rgba(245,158,11,0.2)];
+  }
+  
+  .glow-pink {
+    @apply shadow-[0_0_30px_rgba(244,114,182,0.2)];
+  }
+
   .glow-soft {
-    @apply shadow-[0_10px_40px_-10px_rgba(245,158,11,0.2)];
+    @apply shadow-[0_20px_50px_-15px_rgba(245,158,11,0.15)];
+  }
+
+  .bouncy-hover {
+    @apply transition-transform duration-300 hover:scale-105 active:scale-95;
   }
 }

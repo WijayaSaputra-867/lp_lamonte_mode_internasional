@@ -1,30 +1,77 @@
 "use client";
 
 import React from "react";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, Instagram, Facebook, Twitter, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="py-12 border-t border-zinc-100 text-zinc-500 bg-zinc-50/50">
-      <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 flex items-center justify-center rounded-lg bg-white border border-zinc-200 shadow-sm">
-            <ShoppingBag className="text-primary" size={16} />
+    <footer className="pt-24 pb-12 border-t border-zinc-100 text-zinc-500 bg-surface/50 relative overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-zinc-900/5 to-transparent pointer-events-none"></div>
+
+      <div className="mx-auto max-w-7xl px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-12 w-12 flex items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-pink-500 text-white shadow-xl shadow-amber-500/20">
+                <ShoppingBag size={24} />
+              </div>
+              <span className="text-2xl font-black tracking-tighter outfit text-zinc-900">
+                MITRA <span className="text-amber-500">LAMONTE</span>
+              </span>
+            </div>
+            <p className="max-w-md text-lg font-medium leading-relaxed mb-8">
+              Empowering wirausaha families through high-quality kids fashion collections since 2011. Join our mission to dress the next generation with style and comfort.
+            </p>
+            <div className="flex gap-4">
+              {[Instagram, Facebook, Twitter, Mail].map((Icon, i) => (
+                <a key={i} href="#" className="h-12 w-12 flex items-center justify-center rounded-2xl bg-white border-2 border-zinc-100 text-zinc-400 hover:text-amber-500 hover:border-amber-400 transition-all shadow-sm bouncy-hover">
+                  <Icon size={20} />
+                </a>
+              ))}
+            </div>
           </div>
-          <span className="text-lg font-bold tracking-tight outfit text-zinc-900">
-            Mitra <span className="text-primary">Lamonte</span>
-          </span>
+
+          <div>
+            <h4 className="text-lg font-black text-zinc-900 outfit mb-8 uppercase tracking-widest">Company</h4>
+            <ul className="space-y-4 font-bold">
+              <li><a href="#features" className="hover:text-amber-500 transition-colors">Our Benefits</a></li>
+              <li><a href="#catalog" className="hover:text-amber-500 transition-colors">Digital Catalog</a></li>
+              <li><a href="#tiers" className="hover:text-amber-500 transition-colors">Partnership Tiers</a></li>
+              <li><a href="#faq" className="hover:text-amber-500 transition-colors">Support FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-black text-zinc-900 outfit mb-8 uppercase tracking-widest">Contact Us</h4>
+            <ul className="space-y-6 font-bold">
+              <li className="flex items-start gap-3">
+                <MapPin size={20} className="text-amber-500 shrink-0" />
+                <span>Ruko Elang Laut Block C, Jakarta Utara, Indonesia</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={20} className="text-amber-500 shrink-0" />
+                <span>+62 812-3456-7890</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={20} className="text-amber-500 shrink-0" />
+                <span>hello@lamonte.id</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="text-sm font-medium">
-          &copy; 2026 PT Lamonte Mode Internasional. All rights reserved.
-        </div>
-        <div className="flex gap-6 text-sm font-medium">
-          <a href="#" className="hover:text-primary transition-colors">
-            Syarat & Ketentuan
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            Kebijakan Privasi
-          </a>
+
+        <div className="h-px bg-zinc-200 w-full mb-12"></div>
+
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-sm font-black text-zinc-400 uppercase tracking-widest">
+            &copy; 2026 PT Lamonte Mode Internasional.
+          </div>
+          <div className="flex gap-10 text-xs font-black uppercase tracking-widest">
+            <a href="#" className="hover:text-zinc-900 transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-zinc-900 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-zinc-900 transition-colors">Affiliate</a>
+          </div>
         </div>
       </div>
     </footer>
